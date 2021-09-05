@@ -7,12 +7,15 @@ def opening_msg():
     os.system('cls')
     print("What is the outcome of the following code?")
 
+# errors = {"A": 'NameError', "B": 'ValueError', "C": "TypeError", "D": "IndexError",
+        # "E": "KeyError", "F":"SyntaxError", "G": "ZeroDivisionError", "H": "AttributeError"}
 
 def options_msg():
-    print("{: >4s}{}: {}\t\t{}: {}".format("",   'A' ,d.errors['A'], 'B', d.errors['B']))
-    print("{: >4s}{}: {}\t\t{}: {}".format("",   'C' ,d.errors['C'], 'D', d.errors['D']))
-    print("{: >4s}{}: {}\t\t\t{}: {}".format("", 'E' ,d.errors['E'], 'F', d.errors['F']))
-    print("{: >4s}{}: {}\t{}: {}".format("",     'G' ,d.errors['G'], 'H', d.errors['H']))
+    print("{: >4s}{}: {}\t\t{}: {}".format("",   'N' ,d.errors['N'], 'V', d.errors['V']))
+    print("{: >4s}{}: {}\t\t{}: {}".format("",   'T' ,d.errors['T'], 'I', d.errors['I']))
+    print("{: >4s}{}: {}\t\t\t{}: {}".format("", 'K' ,d.errors['K'], 'S', d.errors['S']))
+    print("{: >4s}{}: {}\t{}: {}".format("",     'Z' ,d.errors['Z'], 'A', d.errors['A']))
+    print("{: >4s}{}: {}".format("",     'F' ,d.errors['F']))
 
 
 def get_user_choice(): 
@@ -60,7 +63,7 @@ def display_problem(problem):
 
 def continue_choice():
     continue_choice=True        
-    user_choice = input("{: >4s}Continue or [Q/q]? > ".format(""))
+    user_choice = input("CONTINUE or [Q/q]? > ")
     if (user_choice == '' or user_choice[0].upper() == "Y") and continue_choice:
         return continue_choice
     else:

@@ -19,3 +19,6 @@ if __name__ == '__main__':
         user_continue_choice=f.continue_choice()
     if user_continue_choice:
         f.display_problem(p.problem_five)
+        user_continue_choice=f.continue_choice()
+    if user_continue_choice:
+        f.display_problem(p.problem_six)
