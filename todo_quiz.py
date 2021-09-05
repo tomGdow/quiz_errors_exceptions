@@ -1,18 +1,11 @@
 
     """ problems
 
-       "mystring".getTime()   AttributeError
        
-       print "hello"          SyntaxError
 
-       File Not found error
 
-       with open('mynonfile.txt') as f:
-...   f.read()
 
-      1 + 2 + "three"     // Type error
 
-      3/ "two"                         // ValueError
 
       import math
       math.sqrt(-1)

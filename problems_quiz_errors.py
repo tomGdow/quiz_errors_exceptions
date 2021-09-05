@@ -63,7 +63,7 @@ def problem_five():
 
 
 def problem_six():
-    """ add the sum of two integers to a string """
+    """ Attempt to open a non-existent file """
     problem = """{: >4s}
 
     # file 'my_missing_file' does not exist!
@@ -75,4 +75,16 @@ def problem_six():
 
     answer = ("F", d.errors['F'])
     answer_explanation = "FileNotFoundError: [Errno 2] No such file or directory: 'my_missing_file.txt'"
+    return(problem, answer, answer_explanation)
+
+def problem_seven():
+    """ Divide an integer by a string """
+    problem = """{: >4s}
+
+      3 / "two"  
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: unsupported operand type(s) for /: 'int' and 'str' "
     return(problem, answer, answer_explanation)
