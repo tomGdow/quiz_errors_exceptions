@@ -88,3 +88,21 @@ def problem_seven():
     answer = ("T", d.errors['T'])
     answer_explanation = "TypeError: unsupported operand type(s) for /: 'int' and 'str' "
     return(problem, answer, answer_explanation)
+
+
+def problem_eight():
+    """ Take the Square Root of -1"""
+    problem = """{: >4s}
+
+      import math
+      math.sqrt(-1)
+
+    """.format("")
+
+    answer = ("V", d.errors['V'])
+    answer_explanation = "ValueError: math domain error "
+    return(problem, answer, answer_explanation)
+
+
+
+
