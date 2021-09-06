@@ -145,3 +145,34 @@ def problem_ten():
     return(problem, answer, answer_explanation,error_hierarchy)
 
 
+def problem_eleven():
+    """ Attempt to retrieve dictionary value with non-existent key"""
+
+    problem = """{: >4s}
+
+      mydict = {{'a': 'alpha', 'b' : 'beta'}}
+       
+      mydict['c']  
+
+    """.format("")
+
+    answer = ("K", d.errors['K'])
+    answer_explanation = "KeyError: 'c'"
+    error_hierarchy = d.hierarchy['K']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_twelve():
+    """ Attempt to retrieve dictionary value with non-existent key"""
+
+    problem = """{: >4s}
+
+      mydict = {{'a': 'alpha', 'b' : 'beta'}}
+       
+      mydict.get('c')  
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "There is no error and  type(mydict.get('c')) gives <class 'NoneType'>"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)

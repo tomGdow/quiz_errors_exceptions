@@ -5,7 +5,7 @@
 
 errors = {"N": 'NameError', "V": 'ValueError', "T": "TypeError", "I": "IndexError",
         "K": "KeyError", "S":"SyntaxError", "Z": "ZeroDivisionError", "A": "AttributeError",
-        "F": "FileNotFoundError"}
+        "F": "FileNotFoundError", "X": "No Error"}
 
 hierarchy = {"N": "BaseException -> Exception -> NameError",
         "V": "BaseException -> Exception -> ValueError",
@@ -15,6 +15,7 @@ hierarchy = {"N": "BaseException -> Exception -> NameError",
         "S": "BaseException -> Exception -> SyntaxError",
         "Z": "BaseException -> Exception -> ArithmeticError -> ZeroDivisionError",
         "A": "BaseException -> Exception -> AttributeError",
-        "F": "BaseException -> Exception -> OSError -> FileNotFoundError"}
+        "F": "BaseException -> Exception -> OSError -> FileNotFoundError",
+        "X": "No Error"}
 
 
