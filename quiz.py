@@ -3,6 +3,7 @@
 
 import problems_quiz_errors as p
 import functions_quiz_errors as f
+import data_quiz_errors as d
 
 # choice = ''
 if __name__ == '__main__':
@@ -28,3 +29,10 @@ if __name__ == '__main__':
         user_continue_choice=f.continue_choice()
     if user_continue_choice:
         f.display_problem(p.problem_eight)
+        user_continue_choice=f.continue_choice()
+    if user_continue_choice:
+        f.display_problem(p.problem_nine)
+        user_continue_choice=f.continue_choice()
+    if user_continue_choice:
+        f.display_problem(p.problem_ten)
+        user_continue_choice=f.continue_choice()

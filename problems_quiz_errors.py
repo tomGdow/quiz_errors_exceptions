@@ -8,7 +8,8 @@ def problem_one():
    """.format("","print(x)")
     answer=("N", d.errors['N'])
     answer_explanation = "NameError: name 'x' is not defined"
-    return(problem, answer, answer_explanation)
+    error_hierarchy = d.hierarchy['N']
+    return(problem, answer, answer_explanation,error_hierarchy)
 
 def problem_two():
     """ Call a function of two parameters with three parameters """
@@ -21,7 +22,8 @@ def problem_two():
 
     answer = ("T", d.errors['T'])
     answer_explanation = "TypeError: fn() takes 2 positional arguments but 3 were given"
-    return(problem, answer, answer_explanation)
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
 
 def problem_three():
     """ Request a non-existent attribute from an object """
@@ -34,7 +36,8 @@ def problem_three():
 
     answer = ("A",d.errors['A'])
     answer_explanation = "AttributeError: 'str' object has no attribute 'getTime'"
-    return(problem, answer, answer_explanation)
+    error_hierarchy = d.hierarchy['A']
+    return(problem, answer, answer_explanation,error_hierarchy)
 
 def problem_four():
     """ call print function without parentheses """
@@ -46,7 +49,8 @@ def problem_four():
 
     answer = ("S", d.errors['S'])
     answer_explanation = "SyntaxError: Missing parentheses in call to 'print'. Did you mean print('hello')?"
-    return(problem, answer, answer_explanation)
+    error_hierarchy = d.hierarchy['S']
+    return(problem, answer, answer_explanation,error_hierarchy)
 
 
 def problem_five():
@@ -59,7 +63,8 @@ def problem_five():
 
     answer = ("T", d.errors['T'])
     answer_explanation = "TypeError: unsupported operand type(s) for +: 'int' and 'str'"
-    return(problem, answer, answer_explanation)
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
 
 
 def problem_six():
@@ -75,7 +80,8 @@ def problem_six():
 
     answer = ("F", d.errors['F'])
     answer_explanation = "FileNotFoundError: [Errno 2] No such file or directory: 'my_missing_file.txt'"
-    return(problem, answer, answer_explanation)
+    error_hierarchy = d.hierarchy['F']
+    return(problem, answer, answer_explanation,error_hierarchy)
 
 def problem_seven():
     """ Divide an integer by a string """
@@ -87,7 +93,8 @@ def problem_seven():
 
     answer = ("T", d.errors['T'])
     answer_explanation = "TypeError: unsupported operand type(s) for /: 'int' and 'str' "
-    return(problem, answer, answer_explanation)
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
 
 
 def problem_eight():
@@ -101,8 +108,40 @@ def problem_eight():
 
     answer = ("V", d.errors['V'])
     answer_explanation = "ValueError: math domain error "
-    return(problem, answer, answer_explanation)
+    error_hierarchy = d.hierarchy['V']
+    return(problem, answer, answer_explanation,error_hierarchy)
 
 
+def problem_nine():
+    """ Attempt to remove item from dictionary with .pop() (no argument)"""
+
+    problem = """{: >4s}
+
+      mydict = {{'a': 'alpha', 'b' : 'beta'}}
+       
+      mydict.pop() 
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: pop expected at least 1 argument, got 0"
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+
+def problem_ten():
+    """ call print function with invalid quotation marks"""
+
+    problem = """{: >4s}
+
+      print('Simon's millions')
+
+    """.format("")
+
+    answer = ("S", d.errors['S'])
+    answer_explanation = "SyntaxError: invalid syntax"
+    error_hierarchy = d.hierarchy['S']
+    return(problem, answer, answer_explanation,error_hierarchy)
 
 

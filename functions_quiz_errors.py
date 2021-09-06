@@ -46,6 +46,7 @@ def analyze_choice(fn,choice):
     print()
     print("{: >4s}{}".format("",fn()[2]))
     print()
+    print("{: >4s}{}".format("",fn()[3]))
 
 def choose_problem():
     sample = random.sample(problem_list,1)
