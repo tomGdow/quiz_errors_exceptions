@@ -176,3 +176,19 @@ def problem_twelve():
     answer_explanation = "There is no error and  type(mydict.get('c')) gives <class 'NoneType'>"
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_thirteen():
+    """ Attempt to retrieve dictionary value with non-existent key"""
+
+    problem = """{: >4s}
+
+      mydict = {{'a': 'alpha', 'b' : 'beta'}}
+       
+      mydict.get('c', 'Not There)  
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "There is no error and  type(mydict.get('c')) gives <class 'str'>"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
