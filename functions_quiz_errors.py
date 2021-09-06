@@ -6,7 +6,7 @@ import problems_quiz_errors as p
 
 def opening_msg():
     os.system('cls')
-    print("What is the outcome of the following code?")
+    print("What error type, if any, is produced by the following code?")
 
 # errors = {"A": 'NameError', "B": 'ValueError', "C": "TypeError", "D": "IndexError",
         # "E": "KeyError", "F":"SyntaxError", "G": "ZeroDivisionError", "H": "AttributeError"}

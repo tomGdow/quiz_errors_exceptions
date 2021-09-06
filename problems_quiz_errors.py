@@ -192,3 +192,21 @@ def problem_thirteen():
     answer_explanation = "There is no error and  type(mydict.get('c')) gives <class 'str'>"
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_fourteen():         
+    """ Add a string to the sum of two integers """
+
+    problem = """{: >4s}
+
+    a = 10
+    b = 20
+    c = '30'
+    result = a + b + c 
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: unsupported operand type(s) for +: 'int' and 'str'"
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
