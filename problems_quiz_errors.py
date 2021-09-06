@@ -240,3 +240,24 @@ def problem_fifteen():
     answer_explanation = "TypeError: unsupported operand type(s) for +=: 'int' and 'str'"
     error_hierarchy = d.hierarchy['T']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_sixteen():         
+    """ call an undefined function 
+
+    """
+
+    problem = """{: >4s}
+    
+    def calc_sum(x,y):
+        op = x + y
+        return(op)
+
+    ss = calc_su(5,10)
+    print(ss)
+
+    """.format("")
+
+    answer = ("N", d.errors['N'])
+    answer_explanation = "NameError: name 'calc_su' is not defined"
+    error_hierarchy = d.hierarchy['N']
+    return(problem, answer, answer_explanation,error_hierarchy)
