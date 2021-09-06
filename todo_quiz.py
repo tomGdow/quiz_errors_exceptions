@@ -34,16 +34,19 @@ What is the result?     // TypeError
     // TypeError:
        
 
+        title ="python in easy steps"
+        print titel
 
 "todo keyeror eg"                                          
 "indentation error"
 
+     import random
+     random.choice([]) // IndexError
 
 
+      ab = int('hi') // ValueError
 
-      ab = int('2') // ValueError
-
-
+        4 + spam * 3
 
       
     """

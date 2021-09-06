@@ -8,16 +8,12 @@ def opening_msg():
     os.system('cls')
     print("What error type, if any, is produced by the following code?")
 
-# errors = {"A": 'NameError', "B": 'ValueError', "C": "TypeError", "D": "IndexError",
-        # "E": "KeyError", "F":"SyntaxError", "G": "ZeroDivisionError", "H": "AttributeError"}
-
 def options_msg():
     print("{: >4s}{}: {}\t\t{}: {}".format("",   'N' ,d.errors['N'], 'V', d.errors['V']))
     print("{: >4s}{}: {}\t\t{}: {}".format("",   'T' ,d.errors['T'], 'I', d.errors['I']))
     print("{: >4s}{}: {}\t\t\t{}: {}".format("", 'K' ,d.errors['K'], 'S', d.errors['S']))
     print("{: >4s}{}: {}\t{}: {}".format("",     'Z' ,d.errors['Z'], 'A', d.errors['A']))
     print("{: >4s}{}: {}\t{}: {}".format("",     'F' ,d.errors['F'], 'X', d.errors['X']))
-    # print("{: >4s}{}: {}".format("",     'F' ,d.errors['F']))                      
 
 
 def get_user_choice(): 
@@ -25,7 +21,9 @@ def get_user_choice():
     while (bad_input):
         try:
             choice = input('Your Choice ? ')
-            if choice[0].upper() not in d.errors.keys():
+            if choice != '':
+                choice = choice[0].upper()
+            if choice not in d.errors.keys():
                 raise ValueError('Invalid Choice')
             bad_input=False
         except ValueError as e:

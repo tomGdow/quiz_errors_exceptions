@@ -1,22 +1,30 @@
+import random
+
 import problems_quiz_errors as p
 import functions_quiz_errors as f
-import data_quiz_errors as d
+# import data_quiz_errors as d
 
 if __name__ == '__main__':
-    f.display_problem(p.problem_one)
-    f.next_question(p.problem_two, f.continue_choice)
-    f.next_question(p.problem_three, f.continue_choice)
-    f.next_question(p.problem_four, f.continue_choice)
-    f.next_question(p.problem_five, f.continue_choice)
-    f.next_question(p.problem_six, f.continue_choice)
-    f.next_question(p.problem_seven, f.continue_choice)
-    f.next_question(p.problem_eight, f.continue_choice)
-    f.next_question(p.problem_nine, f.continue_choice)
-    f.next_question(p.problem_ten, f.continue_choice)
-    f.next_question(p.problem_eleven, f.continue_choice)
-    f.next_question(p.problem_twelve, f.continue_choice)
-    f.next_question(p.problem_thirteen, f.continue_choice)
-    f.next_question(p.problem_fourteen, f.continue_choice)
-    f.next_question(p.problem_fifteen, f.continue_choice)
-    f.next_question(p.problem_sixteen, f.continue_choice)
+    problem_list = [
+            p.problem_one,
+            p.problem_two,
+            p.problem_three,
+            p.problem_four,
+            p.problem_five, 
+            p.problem_six, 
+            p.problem_seven,
+            p.problem_eight, 
+            p.problem_nine,
+            p.problem_ten,
+            p.problem_eleven,
+            p.problem_twelve, 
+            p.problem_thirteen, 
+            p.problem_fourteen,
+            p.problem_fifteen, 
+            p.problem_sixteen
+            ]
+    random_problem_list = random.sample(problem_list, k=16)
+    f.display_problem(random_problem_list[0])
+    for i in range(1, 16):
+        f.next_question(random_problem_list[i], f.continue_choice)
 
