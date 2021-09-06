@@ -210,3 +210,33 @@ def problem_fourteen():
     answer_explanation = "TypeError: unsupported operand type(s) for +: 'int' and 'str'"
     error_hierarchy = d.hierarchy['T']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_fifteen():         
+    """ Add a string to an integer (zero) 
+
+    error: The problem occurs with sum += mark (TypeError) 
+
+    """
+
+    problem = """{: >4s}
+
+    data=[]
+    def get_data():
+    	for i in range(1,5):
+    		marks=input('Enter Marks:')
+    		data.append(marks)
+
+    def get_avg():
+    	sum=0
+    	for mark in data:
+    		sum += mark     
+    	return sum/len(data)
+    get_data()
+    print(get_avg())
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: unsupported operand type(s) for +=: 'int' and 'str'"
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
