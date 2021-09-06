@@ -2,6 +2,7 @@ import os
 import random
 
 import data_quiz_errors as d
+import problems_quiz_errors as p
 
 def opening_msg():
     os.system('cls')
@@ -72,4 +73,9 @@ def continue_choice():
         print('Bye')
         return continue_choice
 
-
+def next_question(problem, choice_fn):
+    user_continue_choice = choice_fn()
+    if user_continue_choice:
+        display_problem(problem)
+        # user_continue_choice=choice_fn()
+    
