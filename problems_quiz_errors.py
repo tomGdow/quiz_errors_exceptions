@@ -280,6 +280,24 @@ def problem_seventeen():
     error_hierarchy = d.hierarchy['A']
     return(problem, answer, answer_explanation,error_hierarchy)
 
+
+def problem_eighteen():         
+    """ Call .add() on a set 
+
+    """
+
+    problem = """{: >4s}
+
+    myset = {{10, 20, 30}}
+    myset.add(40)
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No Error"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
 def problem_template():         
     """ DOCSTRING HERE 
 
