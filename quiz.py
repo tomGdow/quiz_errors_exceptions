@@ -26,13 +26,16 @@ if __name__ == '__main__':
             p.problem_eighteen,
             p.problem_nineteen,
             p.problem_twenty,
-            p.problem_twenty_one
+            p.problem_twenty_one,
+            p.problem_twenty_two,
+            p.problem_twenty_three,
+            p.problem_twenty_four,
             ]
-    random_problem_list = random.sample(problem_list, k=21) # k = probem_number
+    random_problem_list = random.sample(problem_list, k=24) # k = probem_number
     f.display_problem(random_problem_list[0])
     i = 1
     quit = False
-    while not quit and i < 21:  # i < problem_number
+    while not quit and i < 24:  # i < problem_number
         choice =f.next_question(random_problem_list[i], f.continue_choice)
         i += 1
         quit = not choice

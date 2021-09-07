@@ -348,3 +348,56 @@ def problem_twenty_one():
     answer_explanation = "ValueError: invalid literal for int() with base 10: 'hi'"
     error_hierarchy = d.hierarchy['V']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_twenty_two():         
+    """ Call random.choice() on an empty sequence
+
+    """
+
+    problem = """{: >4s}
+    
+    import random
+    random.choice([])
+
+    """.format("")
+
+    answer = ("I", d.errors['I'])
+    answer_explanation = "IndexError: Cannot choose from an empty sequence"
+    error_hierarchy = d.hierarchy['I']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_twenty_three():         
+    """ Call random.sample() on list with key value equal to length of list 
+
+    """
+
+    problem = """{: >4s}
+    mylist = [1,2,3]
+    random.sample(mylist,3)
+    
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No Error: output is '[2, 1, 3]' "
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_twenty_four():         
+    """ Call random.sample() on list with key value greater than length of list 
+
+    """
+
+    problem = """{: >4s}
+    mylist = [1,2,3]
+    random.sample(mylist,4)
+    
+
+    """.format("")
+
+    answer = ("V", d.errors['V'])
+    answer_explanation = "ValueError: Sample larger than population or is negative"
+    error_hierarchy = d.hierarchy['V']
+    return(problem, answer, answer_explanation,error_hierarchy)
