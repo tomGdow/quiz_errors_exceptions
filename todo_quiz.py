@@ -16,7 +16,6 @@
 
       ab = int('hi') // ValueError
 
-        4 + spam * 3
 
       
     """
