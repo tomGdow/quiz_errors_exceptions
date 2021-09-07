@@ -421,3 +421,23 @@ def problem_twenty_five():
     answer_explanation = "AttributeError: '_io.TextIOWrapper' object has no attribute 'readall'"
     error_hierarchy = d.hierarchy['A']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_twenty_six():         
+    """ If block with indentation error 
+
+    """
+
+    problem = """{: >4s}
+
+        a=10
+        if a >= 10:
+...         a+=2
+...             print(a)
+
+    """.format("")
+
+    answer = ("D", d.errors['D'])
+    answer_explanation = "IndentationError: unexpected indent"
+    error_hierarchy = d.hierarchy['D']
+    return(problem, answer, answer_explanation,error_hierarchy)
