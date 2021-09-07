@@ -298,18 +298,20 @@ def problem_eighteen():
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
 
-def problem_template():         
-    """ DOCSTRING HERE 
+def problem_nineteen():         
+    """ call print() on undefined identifier
 
     """
 
     problem = """{: >4s}
     
+    title ="python in easy steps"
+    print titel
 
     """.format("")
 
-    answer = ("ZZ", d.errors['ZZ'])
-    answer_explanation = "GIVE EXPLANATION"
-    error_hierarchy = d.hierarchy['ZZ']
+    answer = ("N", d.errors['N'])
+    answer_explanation = "NameError: name 'titel' is not defined"
+    error_hierarchy = d.hierarchy['N']
     return(problem, answer, answer_explanation,error_hierarchy)
                      
