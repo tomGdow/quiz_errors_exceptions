@@ -315,3 +315,36 @@ def problem_nineteen():
     error_hierarchy = d.hierarchy['N']
     return(problem, answer, answer_explanation,error_hierarchy)
                      
+
+def problem_twenty():         
+    """ Multiply an undefined identifier
+
+    """
+
+    problem = """{: >4s}
+    
+    4 + spam * 3
+
+    """.format("")
+
+    answer = ("N", d.errors['N'])                          
+    answer_explanation = "NameError: name 'spam' is not defined"
+    error_hierarchy = d.hierarchy['N']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_twenty_one():         
+    """ Call int() on a string
+
+    """
+
+    problem = """{: >4s}
+    
+    ab = int('hi') 
+
+    """.format("")
+
+    answer = ("V", d.errors['V'])
+    answer_explanation = "ValueError: invalid literal for int() with base 10: 'hi'"
+    error_hierarchy = d.hierarchy['V']
+    return(problem, answer, answer_explanation,error_hierarchy)

@@ -14,7 +14,6 @@
      random.choice([]) // IndexError
 
 
-      ab = int('hi') // ValueError
 
 
       
