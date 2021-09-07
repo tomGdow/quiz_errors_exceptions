@@ -261,3 +261,37 @@ def problem_sixteen():
     answer_explanation = "NameError: name 'calc_su' is not defined"
     error_hierarchy = d.hierarchy['N']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_seventeen():         
+    """ Call .add() on a list  
+
+    """
+
+    problem = """{: >4s}
+    
+    l=[10,20,30]         
+    l.add(30)
+
+    """.format("")
+
+    answer = ("A", d.errors['A'])
+    answer_explanation = "AttributeError: 'list' object has no attribute 'add'"
+    error_hierarchy = d.hierarchy['A']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_template():         
+    """ DOCSTRING HERE 
+
+    """
+
+    problem = """{: >4s}
+    
+
+    """.format("")
+
+    answer = ("ZZ", d.errors['ZZ'])
+    answer_explanation = "GIVE EXPLANATION"
+    error_hierarchy = d.hierarchy['ZZ']
+    return(problem, answer, answer_explanation,error_hierarchy)
+                     

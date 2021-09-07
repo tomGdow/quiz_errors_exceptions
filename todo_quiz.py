@@ -1,7 +1,5 @@
 
     """ problems
-l=[10,20,30]
-l.add(30)   // AttributeError
 
 
     f=open('abc.txt')
