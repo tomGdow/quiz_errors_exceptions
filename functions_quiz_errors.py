@@ -76,5 +76,5 @@ def next_question(problem, choice_fn):
     user_continue_choice = choice_fn()
     if user_continue_choice:
         display_problem(problem)
-        # user_continue_choice=choice_fn()
+    return user_continue_choice # here
     
