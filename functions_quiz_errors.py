@@ -53,8 +53,9 @@ def choose_problem():
     sample = random.sample(problem_list,1)
     return sample
 
-def display_problem(problem): 
+def display_problem(problem, question_counter, total_questions): 
     opening_msg()
+    print(f"Question {next(question_counter)} of {total_questions}")
     print(problem()[0]) 
     options_msg()
     print()
@@ -73,9 +74,15 @@ def continue_choice():
         print('Bye')
         return continue_choice
 
-def next_question(problem, choice_fn):
+def next_question(problem, choice_fn, question_counter,total_questions):
     user_continue_choice = choice_fn()
     if user_continue_choice:
-        display_problem(problem)
-    return user_continue_choice # here
+        display_problem(problem, question_counter, total_questions)
+    return user_continue_choice 
     
+def counter(n):
+    i = 1
+    while i <=n:
+        yield i
+        i += 1
+
