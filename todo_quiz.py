@@ -10,8 +10,6 @@
 
 "indentation error"
 
-     import random
-     random.choice([]) // IndexError
 
 
 

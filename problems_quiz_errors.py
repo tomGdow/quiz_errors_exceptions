@@ -401,3 +401,23 @@ def problem_twenty_four():
     answer_explanation = "ValueError: Sample larger than population or is negative"
     error_hierarchy = d.hierarchy['V']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_twenty_five():         
+    """ Call undefined attribute on file object 
+
+    """
+
+    problem = """{: >4s}
+    
+    # 'abc.txt' is a file in the working directory
+
+    f=open('abc.txt')
+    f.readall()
+
+    """.format("")
+
+    answer = ("A", d.errors['A'])
+    answer_explanation = "AttributeError: '_io.TextIOWrapper' object has no attribute 'readall'"
+    error_hierarchy = d.hierarchy['A']
+    return(problem, answer, answer_explanation,error_hierarchy)
