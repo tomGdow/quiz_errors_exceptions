@@ -441,3 +441,88 @@ def problem_twenty_six():
     answer_explanation = "IndentationError: unexpected indent"
     error_hierarchy = d.hierarchy['D']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_twenty_seven():         
+    """ attempt to remove a non-existent element from a set with .remove() 
+
+    """
+
+    problem = """{: >4s}
+
+    myset=set(['tom','dick', 'harry'])
+
+    myset.remove('dave')
+    
+
+    """.format("")
+
+    answer = ("K", d.errors['K'])
+    answer_explanation = "keyerror: 'dave'"
+    error_hierarchy = d.hierarchy['K']
+    return(problem, answer, answer_explanation,error_hierarchy)
+     
+def problem_twenty_eight():         
+    """ attempt to remove a non-existent element from a set with .discard() 
+
+    """
+
+    problem = """{: >4s}
+
+    myset=set(['tom','dick', 'harry'])
+
+    myset.discard('dave')
+    
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No Error. type(myset.discard('dave')) gives <class 'NoneType'>"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_twenty_nine():         
+    """ attempt to remove a non-existent element from a set 
+    using .discard() with two arguments 
+
+    """
+
+    problem = """{: >4s}
+
+    myset=set(['tom','dick', 'harry'])
+
+    myset.discard('dave', 'not there')
+    
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: discard() takes exactly one argument (2 given)"
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_thirty():         
+    """ DOCSTRING HERE 
+
+    """
+
+    problem = """{: >4s}
+
+    try:                     
+        x = int(input("Enter the denominator" ))
+        y = 1 / x
+    else:
+        print('Cannot divide by Zero')
+    finally:
+        print('I always print')
+    
+    print('j', end = ' ')
+
+    """.format("")
+
+    answer = ("S", d.errors['S'])
+    answer_explanation = """SyntaxError: invalid syntax.
+    ('else' clause must be preceded by 'except' clause)"""
+    error_hierarchy = d.hierarchy['S']
+    return(problem, answer, answer_explanation,error_hierarchy)
