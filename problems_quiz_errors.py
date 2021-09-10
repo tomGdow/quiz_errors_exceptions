@@ -458,7 +458,10 @@ def problem_twenty_seven():
     """.format("")
 
     answer = ("K", d.errors['K'])
-    answer_explanation = "keyerror: 'dave'"
+    answer_explanation = """keyerror: 'dave'
+    .remove() removes an element from a set; it must be a member.
+    If the element is not a member, a KeyError is raised
+    """
     error_hierarchy = d.hierarchy['K']
     return(problem, answer, answer_explanation,error_hierarchy)
      
