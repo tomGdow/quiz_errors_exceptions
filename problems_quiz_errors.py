@@ -503,8 +503,8 @@ def problem_twenty_nine():
 
 
 def problem_thirty():         
-    """ DOCSTRING HERE 
-
+    """ Call try-else-finally code block without an except clause 
+       
     """
 
     problem = """{: >4s}
@@ -525,4 +525,61 @@ def problem_thirty():
     answer_explanation = """SyntaxError: invalid syntax.
     ('else' clause must be preceded by 'except' clause)"""
     error_hierarchy = d.hierarchy['S']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+
+def problem_thirty_one():         
+    """ Use .popitem() without an argument to remove last item from dictionary
+    """
+
+    problem = """{: >4s}
+    
+    mydict = {{'a': 'alpha', 'b' : 'beta'}}
+
+    mydict.popitem() 
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = """Removes last item and returns it. mydict.popitem() (* ('b', 'beta') *)"""
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+
+def problem_thirty_two():         
+    """Call .add() to add element to empty dictionary ('{{}}')
+    """
+
+    problem = """{: >4s}
+    
+    x = {{}}
+    x.add('tom')
+
+    """.format("")
+
+    answer = ("A", d.errors['A'])
+    answer_explanation = "AttributeError: 'dict' object has no attribute 'add' "
+    error_hierarchy = d.hierarchy['A']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_thirty_three():         
+    """Call .add() to add element to emtpty set 
+
+    """
+
+    problem = """{: >4s}
+    
+    x = set()
+    x.add('tom')
+    
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = """No error. type(x.add('tom')) (* <class 'NoneType'> *) 
+    type(x)  (* <class 'set'> *)"""
+    error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
