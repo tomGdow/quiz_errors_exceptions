@@ -586,3 +586,26 @@ def problem_thirty_three():
     type(x)  (* <class 'set'> *)"""
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_thirty_four():         
+    """ DOCSTRING HERE 
+
+    """
+
+    problem = """{: >4s}
+
+    # 'greetings.py' is a valid module in the working directory
+
+    import greetings as gr
+
+    import importlib
+    importlib.reload(greetings)
+    
+
+    """.format("")
+
+    answer = ("N", d.errors['N'])
+    answer_explanation = "NameError: name 'greetings' is not defined"
+    error_hierarchy = d.hierarchy['N']
+    return(problem, answer, answer_explanation,error_hierarchy)
