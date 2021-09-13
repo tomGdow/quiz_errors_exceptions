@@ -609,3 +609,36 @@ def problem_thirty_four():
     answer_explanation = "NameError: name 'greetings' is not defined"
     error_hierarchy = d.hierarchy['N']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+  
+def problem_thirty_five():         
+    """ DOCSTRING HERE 
+
+    """
+
+    problem = """{: >4s}
+
+    print("{{}},{{}},{{}}".format(2,3,4,5))    
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No Error: returns '2,3,4' "
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_thirty_six():         
+    """ DOCSTRING HERE 
+
+    """
+
+    problem = """{: >4s}
+
+    print("{{}},{{}},{{}}".format(2,3))    
+
+    """.format("")
+
+    answer = ("I", d.errors['I'])
+    answer_explanation = "IndexError: Replacement index 2 out of range for positional args tuple"
+    error_hierarchy = d.hierarchy['I']
+    return(problem, answer, answer_explanation,error_hierarchy)
