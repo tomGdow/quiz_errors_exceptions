@@ -589,7 +589,7 @@ def problem_thirty_three():
 
 
 def problem_thirty_four():         
-    """ DOCSTRING HERE 
+    """ Re-import a module where name of module is no longer defined 
 
     """
 
@@ -612,7 +612,7 @@ def problem_thirty_four():
 
   
 def problem_thirty_five():         
-    """ DOCSTRING HERE 
+    """ Call .format() method on a string with too many arguments
 
     """
 
@@ -628,7 +628,7 @@ def problem_thirty_five():
     return(problem, answer, answer_explanation,error_hierarchy)
 
 def problem_thirty_six():         
-    """ DOCSTRING HERE 
+    """ Call .format() method on a string with too many arguments 
 
     """
 
@@ -641,4 +641,38 @@ def problem_thirty_six():
     answer = ("I", d.errors['I'])
     answer_explanation = "IndexError: Replacement index 2 out of range for positional args tuple"
     error_hierarchy = d.hierarchy['I']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_thirty_seven():         
+    """ Call the builtin function any() with too many arguments
+
+    """
+
+    problem = """{: >4s}
+
+    any(0,1,0,0,1)
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: any() takes exactly one argument (5 given)"
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_thirty_eight():         
+    """ Call the builtin function any() with a single tuple as argument
+
+    """
+
+    problem = """{: >4s}
+
+    any((0,1,0,0,1)) 
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = """True 
+    (any() returns True if bool(x) is True for any x in the iterable)"""
+    error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
