@@ -706,11 +706,29 @@ def problem_forty():
     import datetime
     today=datetime.datetime.now()
     april_fools= datetime.date(today.year, 4, 1)
-    today - april_fools
+    (today - april_fools).today
 
     """.format("")
 
     answer = ("T", d.errors['T'])
     answer_explanation = "TypeError: unsupported operand type(s) for -: 'datetime.datetime' and 'datetime.date'"
     error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_forty_one():         
+    """ subtract two date objects
+
+    """
+
+    problem = """{: >4s}
+    today=datetime.date.today()
+    april_fools= datetime.date(today.year, 4, 1)
+    (today - april_fools).days    
+
+    """.format("")
+                             
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No Error // 173 "
+    error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
