@@ -734,7 +734,6 @@ def problem_forty_one():
     return(problem, answer, answer_explanation,error_hierarchy)
 
 
-
 def problem_forty_two():         
     """ call deltatime constructor with months keyword argument 
 
@@ -749,4 +748,21 @@ def problem_forty_two():
     answer = ("T", d.errors['T'])
     answer_explanation = "TypeError: 'months' is an invalid keyword argument for __new__()"
     error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_forty_three():         
+    """ call deltatime constructor with weeks keyword argument 
+
+    """
+
+    problem = """{: >4s}
+    
+    delta_t = datetime.timedelta(weeks=4)          
+
+    """.format("")
+                             
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No Error. print(delta_t)  // 28 days, 0:00:00"
+    error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
