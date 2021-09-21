@@ -695,3 +695,22 @@ def problem_thirty_nine():
     answer_explanation = "AttributeError: type object 'datetime.date' has no attribute 'now' "
     error_hierarchy = d.hierarchy['A']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_forty():         
+    """ DOCSTRING HERE 
+
+    """
+
+    problem = """{: >4s}
+    import datetime
+    today=datetime.datetime.now()
+    april_fools= datetime.date(today.year, 4, 1)
+    today - april_fools
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: unsupported operand type(s) for -: 'datetime.datetime' and 'datetime.date'"
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
