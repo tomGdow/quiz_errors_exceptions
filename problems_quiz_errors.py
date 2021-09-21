@@ -676,3 +676,22 @@ def problem_thirty_eight():
     (any() returns True if bool(x) is True for any x in the iterable)"""
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_thirty_nine():         
+    """call .now() method on datetime.date object 
+
+    """
+
+    problem = """{: >4s}
+
+    import datetime
+    now = datetime.date.now()
+    
+
+    """.format("")
+
+    answer = ("A", d.errors['A'])
+    answer_explanation = "AttributeError: type object 'datetime.date' has no attribute 'now' "
+    error_hierarchy = d.hierarchy['A']
+    return(problem, answer, answer_explanation,error_hierarchy)
