@@ -184,7 +184,7 @@ def problem_thirteen():
 
       mydict = {{'a': 'alpha', 'b' : 'beta'}}
        
-      mydict.get('c', 'Not There)  
+      mydict.get('c', 'Not There')  
 
     """.format("")
 
