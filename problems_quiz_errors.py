@@ -113,7 +113,7 @@ def problem_eight():
 
 
 def problem_nine():
-    """ Attempt to remove item from dictionary with .pop() (no argument)"""
+    """ Remove item from dictionary with .pop() (no argument)"""
 
     problem = """{: >4s}
 
@@ -374,6 +374,7 @@ def problem_twenty_three():
     """
 
     problem = """{: >4s}
+    import random
     mylist = [1,2,3]
     random.sample(mylist,3)
     
@@ -766,3 +767,55 @@ def problem_forty_three():
     answer_explanation = "No Error. print(delta_t)  // 28 days, 0:00:00"
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_forty_four():         
+    """ Call min function on array with element of different types
+
+    """
+
+    problem = """{: >4s}
+
+    min(['tom', 'dick', 'harry',1])
+    
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = " TypeError: '\u003C' not supported between instances of 'int' and 'str'"
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_forty_five():         
+    """ Call random.choises() on list with key value greater than length of list 
+
+    """
+
+    problem = """{: >4s}
+    import random
+    random.choices([1,2,3],k=4)
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No Error: example output is '[2, 3, 3, 1]' "
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_forty_six():         
+    """ Call random.choises() on list with key value greater than length of list 
+
+    """
+
+    problem = """{: >4s}
+    import random
+    random.choices([1,2,3],4)
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: 'int' object is not iterable"            
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
