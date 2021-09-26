@@ -870,3 +870,39 @@ def problem_forty_nine():
     answer_explanation = "ValueError: unconverted data remains: 7"
     error_hierarchy = d.hierarchy['V']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_fifty():         
+    """ Delete from dictionary using del and non-existant key 
+
+    """
+
+    problem = """{: >4s}
+
+    mydict = {{'fname': 'tom', 'lname': 'doe'}}
+    del mydict['firstname']
+
+    """.format("")
+
+    answer = ("K", d.errors['K'])
+    answer_explanation = "KeyError: 'firstname'"
+    error_hierarchy = d.hierarchy['K']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_fifty_one():         
+    """ Delete from dictionary using .pop and non-existant key 
+
+    """
+
+    problem = """{: >4s}
+                                                     
+    mydict = {{'fname': 'tom', 'lname': 'doe'}}
+    mydict.pop('firstname')
+                                                    
+
+    """.format("")
+
+    answer = ("K", d.errors['K'])
+    answer_explanation = "KeyError: 'firstname' "
+    error_hierarchy = d.hierarchy['K']
+    return(problem, answer, answer_explanation,error_hierarchy)
