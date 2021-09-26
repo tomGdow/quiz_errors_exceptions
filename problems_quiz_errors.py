@@ -819,3 +819,54 @@ def problem_forty_six():
     error_hierarchy = d.hierarchy['T']
     return(problem, answer, answer_explanation,error_hierarchy)
 
+
+def problem_forty_seven():         
+    """ Use strptime method of datetime object to correctly format date 
+
+    """
+
+    problem = """{: >4s}
+    datetime.datetime.strptime('17/2000/3', "%d/%Y/%m")
+    
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No error: datetime.datetime(2000, 3, 17, 0, 0)"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_forty_eight():         
+    """ Use strptime method of datetime object to format date with unconverted data
+
+    """
+
+    problem = """{: >4s}
+          datetime.datetime.strptime('17/2000/3/', "%d/%Y/%m")
+
+    """.format("")
+
+    answer = ("V", d.errors['V'])
+    answer_explanation = "ValueError: unconverted data remains: /"
+    error_hierarchy = d.hierarchy['V']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_forty_nine():         
+    """ Use strptime method of datetime object to format date where month value 
+    is out of range
+
+    """
+
+    problem = """{: >4s}
+
+    datetime.datetime.strptime('3/2000/17', "%d/%Y/%m")
+    
+
+    """.format("")
+
+    answer = ("V", d.errors['V'])
+    answer_explanation = "ValueError: unconverted data remains: 7"
+    error_hierarchy = d.hierarchy['V']
+    return(problem, answer, answer_explanation,error_hierarchy)
