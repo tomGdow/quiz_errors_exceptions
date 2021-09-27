@@ -392,6 +392,7 @@ def problem_twenty_four():
     """
 
     problem = """{: >4s}
+    import random
     mylist = [1,2,3]
     random.sample(mylist,4)
     
@@ -707,7 +708,7 @@ def problem_forty():
     import datetime
     today=datetime.datetime.now()
     april_fools= datetime.date(today.year, 4, 1)
-    (today - april_fools).today
+    (today - april_fools).days
 
     """.format("")
 
@@ -723,6 +724,7 @@ def problem_forty_one():
     """
 
     problem = """{: >4s}
+    import datetime
     today=datetime.date.today()
     april_fools= datetime.date(today.year, 4, 1)
     (today - april_fools).days    
@@ -905,4 +907,109 @@ def problem_fifty_one():
     answer = ("K", d.errors['K'])
     answer_explanation = "KeyError: 'firstname' "
     error_hierarchy = d.hierarchy['K']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_fifty_two():         
+    """ Print a float with 'd' format code 
+
+    """
+
+    problem = """{: >4s}
+
+    import math
+    val= math.sqrt(2)
+    print("{{:d}}".format(val))
+
+    """.format("")
+
+    answer = ("V", d.errors['V'])
+    answer_explanation = "ValueError: Unknown format code 'd' for object of type 'float' "
+    error_hierarchy = d.hierarchy['V']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_fifty_three():         
+    """ Print a float with 'f' format code 
+
+    """
+
+    problem = """{: >4s}
+    
+    print("{{:.0f}}".format(math.sqrt(4)))
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No Error. math.sqrt(4) is a float. Output is 2"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_fifty_four():         
+    """ Print a float with 'd' format code 
+
+    """
+
+    problem = """{: >4s}
+    
+    import math
+    print("{{:d}}".format(math.pow(2,3)))
+
+    """.format("")
+
+    answer = ("V", d.errors['V'])
+    answer_explanation = "ValueError: Unknown format code 'd' for object of type 'float'"
+    error_hierarchy = d.hierarchy['V']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_fifty_five():         
+    """ Print an integer with 'd' format code 
+
+    """
+
+    problem = """{: >4s}
+    
+    print("{{:d}}".format(pow(2,3)))
+    """.format("")
+
+    answer = ("X", d.errors['X'])         
+    answer_explanation = "No error. Output is 8"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_fifty_six():         
+    """ Print an integer with 'd' format code
+
+    """
+
+    problem = """{: >4s}
+                                             
+    print("{{:d}}".format(2**3))
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No error. Output is 8"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_fifty_seven():         
+    """ Missing semi-colon in for statement 
+
+    """
+
+    problem = """{: >4s}
+
+    for i in range(4)
+        print(i)
+
+    """.format("")
+
+    answer = ("S", d.errors['S'])
+    answer_explanation = "SyntaxError: invalid syntax"
+    error_hierarchy = d.hierarchy['S']
     return(problem, answer, answer_explanation,error_hierarchy)
