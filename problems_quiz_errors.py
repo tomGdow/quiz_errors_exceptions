@@ -910,3 +910,55 @@ def problem_fifty_one():
     return(problem, answer, answer_explanation,error_hierarchy)
 
 
+def problem_fifty_two():         
+    """ assert with false inequality 
+
+    """
+
+    problem = """{: >4s}
+    
+    a = 4
+    b = 5
+    assert a > b
+
+    """.format("")
+
+    answer = ("S", d.errors['S'])
+    answer_explanation = "AssertionError"
+    error_hierarchy = d.hierarchy['S']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_fifty_three():         
+    """ Add None to integer 
+
+    """
+
+    problem = """{: >4s}
+
+    None + 1    
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: unsupported operand type(s) for +: 'NoneType' and 'int' "
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_fifty_four():         
+    """ Add boolean to integer 
+
+    """
+
+    problem = """{: >4s}
+
+    True + 1
+    
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No error.  // output is 2"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
