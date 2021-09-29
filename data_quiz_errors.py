@@ -1,13 +1,8 @@
 import problems_quiz_errors as p
 
-# errors = {"A": 'NameError', "B": 'ValueError', "C": "TypeError", "D": "IndexError",
-        # "E": "KeyError", "F":"SyntaxError", "G": "ZeroDivisionError", "H": "AttributeError"}
-
-
-
 errors = {"N": 'NameError', "V": 'ValueError', "T": "TypeError", "I": "IndexError",
         "K": "KeyError", "S":"SyntaxError", "Z": "ZeroDivisionError", "A": "AttributeError",
-        "F": "FileNotFoundError", "X": "No Error", "D": "IndentationError", "B": "UndefinedAsYet"}
+        "F": "FileNotFoundError", "X": "No Error", "D": "IndentationError", "S": "AssertionError"}
 
 hierarchy = {"N": "BaseException -> Exception -> NameError",
         "V": "BaseException -> Exception -> ValueError",
@@ -19,7 +14,7 @@ hierarchy = {"N": "BaseException -> Exception -> NameError",
         "A": "BaseException -> Exception -> AttributeError",
         "F": "BaseException -> Exception -> OSError -> FileNotFoundError",
         "D": "BaseException -> Exception -> SyntaxError -> IndentationError",
-        "B": "UndefinedAsYet",             
+        "S": "BaseException -> Exception -> AssertionError",             
         "X": "No Error"}
 
 

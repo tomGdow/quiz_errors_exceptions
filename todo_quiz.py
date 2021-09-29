@@ -1,6 +1,9 @@
 
     """ problems
 
+assertError
+
+None + 1
 
 
 
