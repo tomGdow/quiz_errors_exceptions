@@ -13,7 +13,7 @@ Clone the repository
 
 ## Sample Screenshot	
 
-![pict](.\png\quiz_errors_exceptions_examle_screen.png)
+![pict](./png/quiz_errors_exceptions_examle_screen.png)
 
 
 
