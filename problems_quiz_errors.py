@@ -1014,7 +1014,7 @@ def problem_fifty_seven():
     problem = """{: >4s}
 
     for i in range(3):
-        if True:
+        if i:
             print('hello')
             break
         else:
