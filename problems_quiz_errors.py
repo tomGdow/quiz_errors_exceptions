@@ -923,9 +923,9 @@ def problem_fifty_two():
 
     """.format("")
 
-    answer = ("S", d.errors['S'])
+    answer = ("R", d.errors['R'])
     answer_explanation = "AssertionError"
-    error_hierarchy = d.hierarchy['S']
+    error_hierarchy = d.hierarchy['R']
     return(problem, answer, answer_explanation,error_hierarchy)
 
 
