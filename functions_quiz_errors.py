@@ -1,11 +1,16 @@
 import os
 import random
+import sys
 
 import data_quiz_errors as d
 import problems_quiz_errors as p
 
 def opening_msg():
-    os.system('cls')
+    if sys.platform == 'win32':
+        os.system('cls')
+    else:
+        os.system('clear')
+
     print("What error type, if any, is produced by the following code?")
 
 def options_msg():
