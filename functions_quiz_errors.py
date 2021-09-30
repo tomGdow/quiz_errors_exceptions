@@ -14,7 +14,7 @@ def options_msg():
     print("{: >4s}{}: {}\t\t\t{}: {}".format("", 'K' ,d.errors['K'], 'S', d.errors['S']))
     print("{: >4s}{}: {}\t{}: {}".format("",     'Z' ,d.errors['Z'], 'A', d.errors['A']))
     print("{: >4s}{}: {}\t{}: {}".format("",     'F' ,d.errors['F'], 'X', d.errors['X']))
-    print("{: >4s}{}: {}\t\t{}: {}".format("",     'D' ,d.errors['D'], 'S', d.errors['S']))
+    print("{: >4s}{}: {}\t\t{}: {}".format("",     'D' ,d.errors['D'], 'R', d.errors['R']))
 
 
 def get_user_choice(): 

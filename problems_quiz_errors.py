@@ -984,3 +984,48 @@ def problem_fifty_five():
     return(problem, answer, answer_explanation,error_hierarchy)
 
 
+def problem_fifty_six():         
+    """ Use 'break' within if statement without enclosing loop 
+
+    """
+
+    problem = """{: >4s}
+
+    a = 2
+    if a < 5:
+        print('hello')
+        a += 1
+        break
+    else:
+        print('goodbye')
+
+    """.format("")
+
+    answer = ("S", d.errors['S'])
+    answer_explanation = "SyntaxError: 'break' not properly in loop"
+    error_hierarchy = d.hierarchy['S']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_fifty_seven():         
+    """ Use 'break' within if statement with enclosing loop
+
+    """
+
+    problem = """{: >4s}
+
+    for i in range(3):
+        if True:
+            print('hello')
+            break
+        else:
+            print('goodbye')
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = """No Error. Output:
+    goodbye
+    hello
+    """
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
