@@ -962,3 +962,25 @@ def problem_fifty_four():
     answer_explanation = "No error.  // output is 2"
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_fifty_five():         
+    """ Use del statement to delete tuple item 
+
+    """
+
+    problem = """{: >4s}
+
+    my_tuple= (1,2,3)
+
+    del my_tuple[0]
+    
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: 'tuple' object doesn't support item deletion"
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
