@@ -294,7 +294,7 @@ def problem_eighteen():
     """.format("")
 
     answer = ("X", d.errors['X'])
-    answer_explanation = "No Error"
+    answer_explanation = "No Error. Returns None, but myset updated to {{40, 10, 20, 30}}"
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
 
