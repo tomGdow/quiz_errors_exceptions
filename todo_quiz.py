@@ -1,10 +1,11 @@
 
     """ problems
 
-assertError
-
-None + 1
-
+>>> "{:,n}".format(1e4)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: Cannot specify ',' with 'n'.
+>>>
 
 
       
