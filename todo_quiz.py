@@ -7,6 +7,11 @@ Traceback (most recent call last):
 ValueError: Cannot specify ',' with 'n'.
 >>>
 
+>>> "{:n}".format("tom")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: Unknown format code 'n' for object of type 'str'
+
 
       
     """
