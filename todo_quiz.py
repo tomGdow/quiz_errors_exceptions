@@ -2,10 +2,6 @@
         """ problems
 
 
->>> "{:n}".format("tom")
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-ValueError: Unknown format code 'n' for object of type 'str'
 
 >>> "{:.4d}".format(1000)
 Traceback (most recent call last):

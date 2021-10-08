@@ -1061,3 +1061,20 @@ def problem_fifty_nine():
     answer_explanation = "ValueError: Unknown format code 'n' for object of type 'str' "
     error_hierarchy = d.hierarchy['V']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_sixty():         
+    """Format an integer with 'd' and precision value 
+
+    """
+
+    problem = """{: >4s}
+    
+    "{{:.4d}}".format(1000)
+
+    """.format("")
+
+    answer = ("V", d.errors['V'])
+    answer_explanation = "ValueError: Precision not allowed in integer format specifier"
+    error_hierarchy = d.hierarchy['V']
+    return(problem, answer, answer_explanation,error_hierarchy)
