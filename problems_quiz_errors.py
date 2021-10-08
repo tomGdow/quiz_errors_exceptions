@@ -1032,7 +1032,7 @@ def problem_fifty_seven():
 
 
 def problem_fifty_eight():         
-    """ DOCSTRING HERE 
+    """ Format an integer with number type 'n' with comma as thousands separator 
 
     """
 
@@ -1044,5 +1044,20 @@ def problem_fifty_eight():
 
     answer = ("V", d.errors['V'])
     answer_explanation = "ValueError: Cannot specify ',' with 'n' "
+    error_hierarchy = d.hierarchy['V']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_fifty_nine():         
+    """  Format a string with number type 'n' 
+    """
+
+    problem = """{: >4s}
+
+    "{{:n}}".format('string')
+
+    """.format("")
+
+    answer = ("V", d.errors['V'])
+    answer_explanation = "ValueError: Unknown format code 'n' for object of type 'str' "
     error_hierarchy = d.hierarchy['V']
     return(problem, answer, answer_explanation,error_hierarchy)
