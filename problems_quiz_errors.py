@@ -1029,3 +1029,20 @@ def problem_fifty_seven():
     """
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_fifty_eight():         
+    """ DOCSTRING HERE 
+
+    """
+
+    problem = """{: >4s}
+    
+    "{{:,n}}".format(1000)
+
+    """.format("")
+
+    answer = ("V", d.errors['V'])
+    answer_explanation = "ValueError: Cannot specify ',' with 'n' "
+    error_hierarchy = d.hierarchy['V']
+    return(problem, answer, answer_explanation,error_hierarchy)
