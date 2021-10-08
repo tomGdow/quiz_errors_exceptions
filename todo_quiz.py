@@ -1,11 +1,6 @@
 
     """ problems
 
->>> "{:,n}".format(1e4)
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-ValueError: Cannot specify ',' with 'n'.
->>>
 
 >>> "{:n}".format("tom")
 Traceback (most recent call last):
