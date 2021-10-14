@@ -432,10 +432,10 @@ def problem_twenty_six():
 
     problem = """{: >4s}
 
-        a=10
+        a = 10
         if a >= 10:
-...         a+=2
-...             print(a)
+            a += 2
+                print(a)
 
     """.format("")
 
