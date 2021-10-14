@@ -1198,3 +1198,85 @@ def problem_sixty_seven():
     answer_explanation = "SyntaxError: invalid syntax"
     error_hierarchy = d.hierarchy['S']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_sixty_eight():         
+    """ Increment an unassigned variable within a function 
+
+    """
+
+    problem = """{: >4s}
+    
+    def myfn(arg):
+        x += arg
+        return x    
+
+    """.format("")
+
+    answer = ("U", d.errors['U'])
+    answer_explanation = "UnboundLocalError: local variable 'x' referenced before assignment"
+    error_hierarchy = d.hierarchy['U']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_sixty_nine():         
+    """ Add undefined variable to function argument 
+
+    """
+
+    problem = """{: >4s}
+    
+    def fn(arg):
+        x + arg
+        return arg
+
+    """.format("")
+
+    answer = ("N", d.errors['N'])
+    answer_explanation = "NameError: name 'x' is not defined"
+    error_hierarchy = d.hierarchy['N']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_seventy():                                                                     
+    """ Increment local unassigned variable within function where variable of 
+        the same name is defined in global scope
+
+    """
+
+    problem = """{: >4s}
+
+    x=1
+    def fn(arg):
+        x += arg
+        return x
+
+    fn(2)
+
+    """.format("")
+
+    answer = ("U", d.errors['U'])
+    answer_explanation = "UnboundLocalError: local variable 'x' referenced before assignment"
+    error_hierarchy = d.hierarchy['U']
+    return(problem, answer, answer_explanation, error_hierarchy)
+
+
+def problem_seventy_one():         
+    """ increment global variable from within function call 
+
+    """
+
+    problem = """{: >4s}
+    
+    x = 1
+    def fn(arg):
+        global x
+        x+=10
+        return x
+
+    fn(10)
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No error. Output is 11"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
