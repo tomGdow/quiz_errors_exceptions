@@ -1280,3 +1280,43 @@ def problem_seventy_one():
     answer_explanation = "No error. Output is 11"
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_seventy_two():         
+    """ A function where non-default parameter follows default parameter
+
+    """
+
+    problem = """{: >4s}
+    
+    def fn(a=10, b=10, c):
+        pass
+
+    fn(c=10)    
+
+    """.format("")
+
+    answer = ("S", d.errors['S'])
+    answer_explanation = "SyntaxError: non-default argument follows default argument"
+    error_hierarchy = d.hierarchy['S']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_seventy_three():         
+    """ DOCSTRING HERE 
+
+    """
+
+    problem = """{: >4s}
+
+    def fn (a=10, b=10, *,c):
+        return a + b + c
+
+    fn(c=10)
+
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No Error. Output is 30"
+    error_hierarchy = d.hierarchy['X']         
+    return(problem, answer, answer_explanation,error_hierarchy)
