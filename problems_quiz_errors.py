@@ -1302,7 +1302,7 @@ def problem_seventy_two():
 
 
 def problem_seventy_three():         
-    """ DOCSTRING HERE 
+    """ A function that adds two arguments with default values to a keyword-only argument
 
     """
 
@@ -1319,4 +1319,210 @@ def problem_seventy_three():
     answer = ("X", d.errors['X'])
     answer_explanation = "No Error. Output is 30"
     error_hierarchy = d.hierarchy['X']         
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_seventy_four():         
+
+    """ A function that adds an integer to a tuple
+
+    """
+
+    problem = """{: >4s}
+
+    def fn(a,b, *args):
+        return a + b + args
+
+    fn(1,2,3,4,5) 
+    
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: unsupported operand type(s) for +: 'int' and 'tuple' "
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_seventy_five():         
+    """ A function that returns the sum of a list and a tuple  
+
+    """
+
+    problem = """{: >4s}
+
+    def fn(a,b,*args):
+        return [a,b] + args
+
+    fn(1,2,3,4,5)
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])                                 
+    answer_explanation = "TypeError: can only concatenate list (not 'tuple') to list"
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_seventy_six():         
+    """ A function that sums the elements of a tuple and integers 
+
+    """
+
+    problem = """{: >4s}
+
+     def fn(a,b, *args):
+        for item in args:
+            a+=item
+        return a + b
+
+     fn(1,2,3,4,5)
+    
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No Error. Returns 15"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_seventy_seven():         
+    """ A function that adds a tuple to a tuple 
+
+    """
+
+    problem = """{: >4s}
+
+    def fn(a,b, * args):
+        return (a,b) + args
+
+    fn(1,2,3,4,5)
+    
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No error. Returns (1,2,3,4,5) - a tuple"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)                          
+
+
+def problem_seventy_eight():         
+    """ function where compulsory keyword parameters is executed with positional arguements only 
+
+    """
+
+    problem = """{: >4s}
+
+    def fn(*a, b, c):
+        return a, b, c
+
+    fn(1,2,3)
+    
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: fn() missing 2 required keyword-only arguments: 'b' and 'c'"
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_seventy_nine():         
+    """ function with compulsory keyword parameters is called with keyword arguments after positional argument 
+
+    """
+
+    problem = """{: >4s}
+
+    def fn(*a, b, c):
+        return a, b, c
+
+    fn(1,b=2,c=3)
+    
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No error. Output is ((1,), 2, 3) "
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_eighty():         
+    """ function call where positional argument follows keyword argument" 
+
+    """
+
+    problem = """{: >4s}
+
+    def fn(*a, b, c):
+        return a, b, c
+
+    fn(b=2,c=3,1)
+    
+
+    """.format("")
+
+    answer = ("S", d.errors['S'])
+    answer_explanation = "SyntaxError: positional argument follows keyword argument"
+    error_hierarchy = d.hierarchy['S']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_eighty_one():         
+    """ Dictionary constructor with string as assignment value
+
+    """
+
+    problem = """{: >4s}
+ 
+    mydict = dict('a' = 'tom')    
+
+    """.format("")
+
+    answer = ("S", d.errors['S'])
+    answer_explanation = " SyntaxError: expression cannot contain assignment, perhaps you meant '=='? "
+    error_hierarchy = d.hierarchy['S']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_eighty_two():         
+    """ Pass keyword arguments to function that returns a dictionary
+
+    """
+
+    problem = """{: >4s}
+
+    def fn(**kwargs):
+        return kwargs
+
+    fn(a=10,b=20)
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No Error. Returns {'a': 10, 'b': 20}"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_eighty_three():         
+    """ Pass keyword arguments as string to function that returns a dictionary
+
+    """
+
+    problem = """{: >4s}
+    
+    def fn(**kwargs):
+        return kwargs
+
+    fn('a'=10, 'b'=20)
+
+    """.format("")
+
+    answer = ("S", d.errors['S'])
+    answer_explanation = "SyntaxError: expression cannot contain assignment, perhaps you meant '=='? "
+    error_hierarchy = d.hierarchy['S']
     return(problem, answer, answer_explanation,error_hierarchy)
