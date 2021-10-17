@@ -1526,3 +1526,72 @@ def problem_eighty_three():
     answer_explanation = "SyntaxError: expression cannot contain assignment, perhaps you meant '=='? "
     error_hierarchy = d.hierarchy['S']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_eighty_four():         
+    """ Add an integer to a string 
+
+    """
+
+    problem = """{: >4s}
+
+    2 + "3"
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: unsupported operand type(s) for +: 'int' and 'str'"
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_eighty_five():         
+    """ Multiply a string by an integer 
+
+    """
+
+    problem = """{: >4s}
+
+    2 * "3"
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No error. Output is \"33\" "
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_eighty_six():         
+    """ Concatenate two strings using the '+' operator
+
+    """
+
+    problem = """{: >4s}
+    
+    '2' + '3'
+    
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No Error. Output is 23"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_eighty_seven():         
+    """ Multiply two strings with '*' operator 
+
+    """
+
+    problem = """{: >4s}
+
+    '2' * '3'
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: can't multiply sequence by non-int of type 'str' "
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
