@@ -1595,3 +1595,83 @@ def problem_eighty_seven():
     answer_explanation = "TypeError: can't multiply sequence by non-int of type 'str' "
     error_hierarchy = d.hierarchy['T']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_eighty_eight():         
+    """ Subtract two strings using the '-' operator
+
+    """
+
+    problem = """{: >4s}
+    
+    "2" - "1"
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: unsupported operand type(s) for -: 'str' and 'str'"
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_eighty_nine():         
+    """ Divide a string by an integer using the "/" operator 
+
+    """
+
+    problem = """{: >4s}
+
+    "2"/3
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: unsupported operand type(s) for /: 'str' and 'int' "
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_ninety():         
+    """ A function with return statements in both try and finally blocks is called and the output is printed
+
+    """
+
+    problem = """{: >4s}
+
+    def fn():
+        try:
+            return 1
+        finally:
+            return 2
+
+    print("{{}}{{}}".format(fn()))
+
+    """.format("")
+
+    answer = ("I", d.errors['I'])
+    answer_explanation = "IndexError: Replacement index 1 out of range for positional args tuple"
+    error_hierarchy = d.hierarchy['I']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_ninety_one():         
+    """ A function with return statements within both try and finally block where output is assumed to be an integer. 
+
+    """
+
+    problem = """{: >4s}
+
+
+   def fn():
+       try:
+           return 1
+       finally:
+           return 1.23
+
+    print("{{:d}}".format(fn()))
+
+    """.format("")
+
+    answer = ("V", d.errors['V'])
+    answer_explanation = "ValueError: Unknown format code 'd' for object of type 'float'"
+    error_hierarchy = d.hierarchy['V']
+    return(problem, answer, answer_explanation,error_hierarchy)
