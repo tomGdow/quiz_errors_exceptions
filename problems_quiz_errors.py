@@ -1675,3 +1675,65 @@ def problem_ninety_one():
     answer_explanation = "ValueError: Unknown format code 'd' for object of type 'float'"
     error_hierarchy = d.hierarchy['V']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_ninety_two():         
+    """ Call random.sample with a list as the sole argument 
+
+    """
+
+    problem = """{: >4s}
+    
+    import random
+    random.sample(range(10))
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = """TypeError: Random.sample() missing 1 required positional argument: 'k' 
+    
+    {} 
+    """.format(d.extra_material["random_sample_choice"]) 
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_ninety_three():         
+    """ Call random.sample() with a keyword argument as second argument 
+
+    """
+
+    problem = """{: >4s}
+    
+    import random
+    random.sample(range(10), k=2)
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = """No error. Sample output is [7,8] 
+    
+    {} 
+    """.format(d.extra_material["random_sample_choice"]) 
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_ninety_four():         
+    """ Call random.choices() with a list as the sole arguement 
+
+    """
+
+    problem = """{: >4s}
+    
+    import random
+    random.choices(range(10))
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = """No error. Sample output is [8] 
+    
+    {} 
+    """.format(d.extra_material["random_sample_choice"]) 
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)

@@ -20,4 +20,20 @@ hierarchy = {
         "U": "BaseException -> Exception -> NameError -> UnboundLocalError",
         "X": "No Error"}
 
+extra_material = {
 
+        "random_sample_choice" : """NOTE
+
+        random.sample(range(10))       //    TypeError
+        random.choice(range(10))       //    2    (an integer)
+        random.choices(range(10)       //    [2]  (a list)
+
+        random.sample(range(10), 1)    //    [2]  (a list)
+        random.choice(range(10), 1)    //    TypeError
+        random.choices(range(10), 1)   //    TypeError
+
+        random.sample(range(10), k=1)  //    [4]
+        random.choices(range(10, k=1)  //    [1]  (a list)
+        """
+
+        }
