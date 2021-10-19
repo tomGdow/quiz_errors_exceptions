@@ -1737,3 +1737,41 @@ def problem_ninety_four():
     """.format(d.extra_material["random_sample_choice"]) 
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_ninety_five():         
+    """ delete from dictionary with non-existant key 
+
+    """
+
+    problem = """{: >4s}
+ 
+    myd=dict(a='tom', b='dick')
+    
+    del myd['harry']
+
+    """.format("")
+
+    answer = ("K", d.errors['K'])
+    answer_explanation = "KeyError: 'harry'"
+    error_hierarchy = d.hierarchy['K']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_ninety_six():         
+    """ Update a dictionary with a dictionary
+
+    """
+
+    problem = """{: >4s}
+    
+    myd=dict(a='tom', b='dick')
+    
+    myd.update(dict(c='harry'))
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])      
+    answer_explanation = "No error. Output is {'a': 'tom', 'b': 'dick', 'c': 'harry'}"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
