@@ -1775,3 +1775,74 @@ def problem_ninety_six():
     answer_explanation = "No error. Output is {'a': 'tom', 'b': 'dick', 'c': 'harry'}"
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_ninety_seven():         
+    """ Add a list to an integer with random.choice() and random.choices()
+
+    """
+
+    problem = """{: >4s}
+    
+    l = range(10)
+    
+    random.choice(l) + random.choices(l)    
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: can only concatenate list (not 'int') to list"
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_ninety_eight():         
+    """Concatenate two lists with random.choices() and random.sample() 
+
+    """
+
+    problem = """{: >4s}
+
+    random.sample(l,1) + random.choices(l)
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No Error. Sample output: [9, 0]"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_ninety_nine():         
+    """Add a tuple to a tuple  
+
+    """
+
+    problem = """{: >4s}
+
+     (1,) + (2,3)
+    
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No Error. Output: (1, 2, 3)"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_one_hundred():         
+    """Add an integer to a tuple 
+
+    """
+
+    problem = """{: >4s}
+    
+    (1) + (2,3)
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: unsupported operand type(s) for +: 'int' and 'tuple'"
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
