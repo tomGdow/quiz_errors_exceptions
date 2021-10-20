@@ -1846,3 +1846,57 @@ def problem_one_hundred():
     answer_explanation = "TypeError: unsupported operand type(s) for +: 'int' and 'tuple'"
     error_hierarchy = d.hierarchy['T']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_one():         
+    """Call the .index() method on a string where the argument is not present 
+
+    """
+
+    problem = """{: >4s}
+    
+    "harry".index('h',1)
+
+    """.format("")
+
+    answer = ("V", d.errors['V'])
+    answer_explanation = """ValueError: substring not found
+
+    'harry'.rindex('h', 1) also gives ValueError
+    """
+    error_hierarchy = d.hierarchy['V']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_two():         
+    """Call the .find() method on a string where the argument is not present 
+
+    """
+
+    problem = """{: >4s}
+    
+    "harry".find('h',1)
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = """No Error. Returns -1
+
+    'harry'.rfind('h', 1) also returns -1
+    """
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_three():         
+    """Call the .find() method on a string where the argument is not present 
+
+    """
+
+    problem = """{: >4s}
+    
+    "harry".rindex('y',-1)                   i
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = """No Error. Returns 4 """
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
