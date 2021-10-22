@@ -1900,3 +1900,38 @@ def problem_hundred_three():
     answer_explanation = """No Error. Returns 4 """
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_four():         
+    """ Call math.round() on float 
+
+    """
+
+    problem = """{: >4s}
+    
+    import math
+    math.round(22.2)
+
+    """.format("")
+
+    answer = ("A", d.errors['A'])
+    answer_explanation = "AttributeError: module 'math' has no attribute 'round'"
+    error_hierarchy = d.hierarchy['A']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_five():         
+    """ Call builtin function 'round() on float 
+
+    """
+
+    problem = """{: >4s}
+    
+    round(22.5)
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No Error. Output is 22"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
