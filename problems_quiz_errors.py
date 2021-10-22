@@ -1892,7 +1892,7 @@ def problem_hundred_three():
 
     problem = """{: >4s}
     
-    "harry".rindex('y',-1)                   i
+    "harry".rindex('y',-1)
 
     """.format("")
 
@@ -1934,4 +1934,24 @@ def problem_hundred_five():
     answer = ("X", d.errors['X'])
     answer_explanation = "No Error. Output is 22"
     error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_six():         
+    """ Unpack a list with a single value and two right-hand-side variables 
+
+    """
+
+    problem = """{: >4s}
+
+    a = 10
+    b = 10
+    
+    a,b = [10]
+
+    """.format("")
+
+    answer = ("V", d.errors['V'])
+    answer_explanation = "ValueError: not enough values to unpack (expected 2, got 1)"
+    error_hierarchy = d.hierarchy['V']                                     
     return(problem, answer, answer_explanation,error_hierarchy)
