@@ -1955,3 +1955,61 @@ def problem_hundred_six():
     answer_explanation = "ValueError: not enough values to unpack (expected 2, got 1)"
     error_hierarchy = d.hierarchy['V']                                     
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_seven():         
+    """ Use safe_substitute with string Template and identifier error
+
+    """
+
+    problem = """{: >4s}
+
+    from string import Template
+
+    template = Template("Hello $name")
+    template.safe_substitute(namae="dick")
+    
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No error. Output is 'Hello $name' "
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_eight():         
+    """ Use substitute with string Template and identifier error
+
+    """
+
+    problem = """{: >4s}
+
+    from string import Template
+
+    template = Template("Hello $name")
+    template.substitute(namae="dick")
+    
+
+    """.format("")
+
+    answer = ("K", d.errors['K'])
+    answer_explanation = "KeyError: 'name' "
+    error_hierarchy = d.hierarchy['K']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_nine():         
+    """Call 'strip()' string method with more than one argument
+
+    """
+
+    problem = """{: >4s}
+    
+    TomDickHarry'.strip(*['T','D'])
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: strip expected at most 1 argument, got 2"
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
