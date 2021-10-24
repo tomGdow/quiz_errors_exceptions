@@ -2047,3 +2047,24 @@ def problem_hundred_eleven():
     answer_explanation = "No error. Output is {('dick', 'harry')}"
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_twelve():         
+    """Call '.pop()' on a list 
+
+    """
+
+    problem = """{: >4s}
+   
+   lst=[1,2,3]
+   lst.pop()
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = """
+    No error. Removes '3' and returns it 
+    lst.pop(0) removes '1' and returns it
+    """
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
