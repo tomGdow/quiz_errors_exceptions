@@ -1997,7 +1997,6 @@ def problem_hundred_eight():
     error_hierarchy = d.hierarchy['K']
     return(problem, answer, answer_explanation,error_hierarchy)
 
-
 def problem_hundred_nine():         
     """Call 'strip()' string method with more than one argument
 
@@ -2012,4 +2011,39 @@ def problem_hundred_nine():
     answer = ("T", d.errors['T'])
     answer_explanation = "TypeError: strip expected at most 1 argument, got 2"
     error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_ten():         
+    """Add list to set 
+    """
+
+    problem = """{: >4s}
+    
+    myset=set()
+    myset.add(['tom', 'dick', 'harry'])
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: unhashable type: 'list' "
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_eleven():         
+    """ Add a tuple to a set
+
+    """
+
+    problem = """{: >4s}
+    
+    myset = set()
+    myset.add(('dick', 'harry'))
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No error. Output is {('dick', 'harry')}"
+    error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
