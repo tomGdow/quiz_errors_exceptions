@@ -2068,3 +2068,22 @@ def problem_hundred_twelve():
     """
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_thirteen():         
+    """Assign to a list where index is out of range 
+
+    """
+
+    problem = """{: >4s}
+
+    lst=[1,2,3]
+    lst[3]=400
+    
+
+    """.format("")
+
+    answer = ("I", d.errors['I'])
+    answer_explanation = "IndexError: list assignment index out of range"
+    error_hierarchy = d.hierarchy['I']
+    return(problem, answer, answer_explanation,error_hierarchy)
