@@ -2087,3 +2087,38 @@ def problem_hundred_thirteen():
     answer_explanation = "IndexError: list assignment index out of range"
     error_hierarchy = d.hierarchy['I']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_fourteen():         
+    """Assign an integer to list where slice start index is out of range  
+
+    """
+
+    problem = """{: >4s}
+
+    lst=[1,2,3]
+    lst[3:]=400
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: can only assign an iterable "
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_fifteen():         
+    """Assign an iterable to list where slice start index is out of range  
+
+    """
+
+    problem = """{: >4s}
+
+    lst=[1,2,3]
+    lst[30:]=[400]
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No Error. Output is [1, 2, 3, 400]"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
