@@ -2142,3 +2142,23 @@ def problem_hundred_sixteen():
     answer_explanation = "TypeError: 'tuple' object does not support item assignment"
     error_hierarchy = d.hierarchy['T']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_seventeen():         
+    """ Reassign an element of a list which is an element of a tuple 
+
+    """
+
+    problem = """{: >4s}
+
+    t=([1,2,3],)
+
+    t[0][0]=[1,2,3]
+    
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No error. Output is ([[1, 2, 3], 2, 3],) "
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
