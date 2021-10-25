@@ -2133,7 +2133,7 @@ def problem_hundred_sixteen():
 
     t=([1,2,3],)
 
-    t[0]=([100,200,300])
+    t[0]=[100,200,300]
     
 
     """.format("")
@@ -2161,4 +2161,42 @@ def problem_hundred_seventeen():
     answer = ("X", d.errors['X'])
     answer_explanation = "No error. Output is ([[1, 2, 3], 2, 3],) "
     error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_eighteen():         
+    """ Pop an item from a set  
+
+    """
+
+    problem = """{: >4s}
+
+    s = set(range(10))
+    s.pop()
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = """
+    No error
+    set.pop(): remove and return an arbitrary set element
+    """
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_nineteen():         
+    """Pop a specific item from a set """
+
+    problem = """{: >4s}
+    
+    s = set(range(10))
+
+    s.pop(2)
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: set.pop() takes no arguments (1 given)"
+    error_hierarchy = d.hierarchy['T']
     return(problem, answer, answer_explanation,error_hierarchy)
