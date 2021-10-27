@@ -2200,3 +2200,37 @@ def problem_hundred_nineteen():
     answer_explanation = "TypeError: set.pop() takes no arguments (1 given)"
     error_hierarchy = d.hierarchy['T']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_twenty():         
+    """ Add two sets 
+
+    """
+
+    problem = """{: >4s}
+    
+    {{1,2,3}} + {{4,5,6}}
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: unsupported operand type(s) for +: 'set' and 'set'"
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_twenty_one():         
+    """ Subtract two sets 
+
+    """
+
+    problem = """{: >4s}
+    
+    {{1,2,3}} - {{3,4,5}}
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No Error. Output is {1,2}"
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
