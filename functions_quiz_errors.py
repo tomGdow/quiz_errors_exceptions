@@ -20,7 +20,7 @@ def options_msg():
     print("{: >4s}{}: {}\t{}: {}".format("",     'Z' ,d.errors['Z'], 'A', d.errors['A']))
     print("{: >4s}{}: {}\t{}: {}".format("",     'F' ,d.errors['F'], 'X', d.errors['X']))
     print("{: >4s}{}: {}\t\t{}: {}".format("",     'D' ,d.errors['D'], 'R', d.errors['R']))
-    print("{: >4s}{}: {}\t\t{} {}".format("",     'U' ,d.errors['U'], '', ''))
+    print("{: >4s}{}: {}\t{}: {}".format("",     'U' ,d.errors['U'], 'E', d.errors['E']))
 
 
 def get_user_choice(): 
