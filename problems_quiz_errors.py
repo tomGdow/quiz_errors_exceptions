@@ -2234,3 +2234,47 @@ def problem_hundred_twenty_one():
     answer_explanation = "No Error. Output is {1,2}"
     error_hierarchy = d.hierarchy['T']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_twenty_two():         
+    """Make a directory where the directory already exists 
+
+    """
+
+    problem = """{: >4s}
+
+    import os
+    os.makdirs('a/b/c/d')
+    os.mkdir('a/b/c/d')
+    
+
+    """.format("")
+
+    answer = ("E", d.errors['E'])
+    answer_explanation = "FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'a/b/c/d'"
+    error_hierarchy = d.hierarchy['E']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_twenty_three():         
+    """A named variable shadows into a function
+
+    """
+
+    problem = """{: >4s}
+
+    num = 1
+
+    def func():
+        num = num + 3
+        print(num)
+    
+    func()
+    print(num)
+
+    """.format("")
+
+    answer = ("U", d.errors['U'])
+    answer_explanation = "UnboundLocalError: local variable 'num' referenced before assignment"
+    error_hierarchy = d.hierarchy['U']
+    return(problem, answer, answer_explanation,error_hierarchy)
