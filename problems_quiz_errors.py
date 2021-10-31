@@ -2278,3 +2278,55 @@ def problem_hundred_twenty_three():
     answer_explanation = "UnboundLocalError: local variable 'num' referenced before assignment"
     error_hierarchy = d.hierarchy['U']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_twenty_four():         
+    """Multiply a string by a string using the '*" operator 
+
+    """
+
+    problem = """{: >4s}
+
+    num = '7' * '7'
+
+    print(num)
+    
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: can't multiply sequence by non-int of type 'str'"
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_twenty_five():         
+    """Format a float with builtin 'format' function with invalid format specifier 
+
+    """
+
+    problem = """{: >4s}
+    
+    print('1200.2 + 1200.2 equals', format(2400.4, "%.4f"))   
+
+    """.format("")
+
+    answer = ("V", d.errors['V'])
+    answer_explanation = "ValueError: Invalid format specifier"
+    error_hierarchy = d.hierarchy['V']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_twenty_six():         
+    """Format a float with builtin 'format' function with valid format specifier 
+
+    """
+
+    problem = """{: >4s}
+    
+    print('1200.2 + 1200.2 equals', format(2400.4, ".4f"))   
+
+    """.format("")
+
+    answer = ("X", d.errors['V'])
+    answer_explanation = "No error.  Output is '1200.2 + 1200.2 equals 2400.4000' "
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
