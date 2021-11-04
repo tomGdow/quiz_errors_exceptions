@@ -2330,3 +2330,72 @@ def problem_hundred_twenty_six():
     answer_explanation = "No error.  Output is '1200.2 + 1200.2 equals 2400.4000' "
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_twenty_seven():         
+    """The result of modulo() where the second argument is '0' 
+
+    """
+
+    problem = """{: >4s}
+
+    1%0
+    
+
+    """.format("")
+
+    answer = ("Z", d.errors['Z'])
+    answer_explanation = "ZeroDivisionError: integer division or modulo by zero"
+    error_hierarchy = d.hierarchy['Z']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_twenty_eight():         
+    """Call 'int()' on '22.2'
+
+    """
+
+    problem = """{: >4s}
+  
+    int('22.2')
+
+    """.format("")
+
+    answer = ("V", d.errors['V'])
+    answer_explanation = "ValueError: invalid literal for int() with base 10: '22.2'"
+    error_hierarchy = d.hierarchy['V']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_twenty_nine():         
+    """Call int() on the output of str(float) 
+
+    """
+
+    problem = """{: >4s}
+    
+    int(str(22.))    
+
+    """.format("")
+
+    answer = ("V", d.errors['V'])
+    answer_explanation = "ValueError: invalid literal for int() with base 10: '22.0'"
+    error_hierarchy = d.hierarchy['V']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_thirty():         
+    """Call int() on the output of float(str) 
+
+    """
+
+    problem = """{: >4s}
+
+    int(float('22.2'))    
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No Error"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
