@@ -2499,3 +2499,37 @@ def problem_hundred_thirty_six():
     answer_explanation = "AttributeError: 'bytes' object has no attribute 'pop' "
     error_hierarchy = d.hierarchy['A']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_thirty_seven():         
+    """Call '.replace()' method on bytearray object 
+
+    """
+
+    problem = """{: >4s}
+    
+    bytearray([48,65,97]).replace(b'0', b'1')    
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No error. Output is bytearray(b'1Aa')"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_thirty_eight():         
+    """Call '.replace()' method on bytes object 
+
+    """
+
+    problem = """{: >4s}
+    
+    bytes([48,65,97]).replace(b'0', b'1')
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No error. Output is b'1Aa' "
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
