@@ -2413,7 +2413,7 @@ def problem_hundred_thirty_one():
     """.format("")
 
     answer = ("X", d.errors['X'])
-    answer_explanation = "No error. Output is '\x01\x7f' "
+    answer_explanation = "No error. Output is '\\x01\\x7f' "
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
 
@@ -2431,4 +2431,38 @@ def problem_hundred_thirty_two():
     answer = ("Y", d.errors['Y'])
     answer_explanation = "UnicodeDecodeError: 'utf-8' codec can't decode byte 0x80 in position 1: invalid start byte"
     error_hierarchy = d.hierarchy['Y']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_thirty_three():         
+    """Call bytes on an array with element outside the range  0 <= x < 256 
+
+    """
+
+    problem = """{: >4s}
+
+    bytes([256])
+
+    """.format("")
+
+    answer = ("V", d.errors['V'])
+    answer_explanation = "ValueError: bytes must be in range(0, 256)"
+    error_hierarchy = d.hierarchy['V']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_thirty_four():         
+    """Call bytes on an array with element within the range  0 <= x < 256 
+
+    """
+
+    problem = """{: >4s}
+
+    bytes([255])
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No Error. Output is b'xff'"
+    error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
