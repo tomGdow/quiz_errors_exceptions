@@ -3,7 +3,7 @@ import problems_quiz_errors as p
 errors = {"N": 'NameError', "V": 'ValueError', "T": "TypeError", "I": "IndexError",
         "K": "KeyError", "S":"SyntaxError", "Z": "ZeroDivisionError", "A": "AttributeError",
         "F": "FileNotFoundError", "X": "No Error", "D": "IndentationError", "R": "AssertionError",
-        "U": "UnboundLocalError", "E": "FileExistsError"}
+        "U": "UnboundLocalError", "E": "FileExistsError", "Y": "UnicodeDecodeError"}
 
 hierarchy = {
         "N": "BaseException -> Exception -> NameError",
@@ -19,6 +19,7 @@ hierarchy = {
         "D": "BaseException -> Exception -> SyntaxError -> IndentationError",
         "R": "BaseException -> Exception -> AssertionError",             
         "U": "BaseException -> Exception -> NameError -> UnboundLocalError",
+        "Y": "BaseException -> Exception -> ValueError -> UnicodeError -> UnicodeDecodeError",               
         "X": "No Error"}
 
 extra_material = {

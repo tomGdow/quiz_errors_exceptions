@@ -2399,3 +2399,36 @@ def problem_hundred_thirty():
     answer_explanation = "No Error"
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_thirty_one():         
+    """ Decode bytes in the ascii range  (0-127)
+
+    """
+
+    problem = """{: >4s}
+
+    bytes([1,127]).decode()    
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No error. Output is '\x01\x7f' "
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_thirty_two():         
+    """ Decode bytes outside the ascii range  (0-127)
+
+    """
+
+    problem = """{: >4s}
+
+    bytes([127,128]).decode()    
+
+    """.format("")
+
+    answer = ("Y", d.errors['Y'])
+    answer_explanation = "UnicodeDecodeError: 'utf-8' codec can't decode byte 0x80 in position 1: invalid start byte"
+    error_hierarchy = d.hierarchy['Y']
+    return(problem, answer, answer_explanation,error_hierarchy)
