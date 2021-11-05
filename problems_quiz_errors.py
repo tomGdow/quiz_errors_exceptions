@@ -2466,3 +2466,36 @@ def problem_hundred_thirty_four():
     answer_explanation = "No Error. Output is b'xff'"
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_thirty_five():         
+    """Call '.pop()' method on bytearray object 
+
+    """
+
+    problem = """{: >4s}
+
+    bytearray([48,65,97]).pop(0)
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No error. Output is 48"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_thirty_six():         
+    """Call '.pop()' method on byte object
+
+    """
+
+    problem = """{: >4s}
+    
+    bytes([48,65,97]).pop(0)
+
+    """.format("")
+
+    answer = ("A", d.errors['A'])
+    answer_explanation = "AttributeError: 'bytes' object has no attribute 'pop' "
+    error_hierarchy = d.hierarchy['A']
+    return(problem, answer, answer_explanation,error_hierarchy)

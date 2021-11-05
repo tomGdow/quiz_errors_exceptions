@@ -140,6 +140,8 @@ if __name__ == '__main__':
             p.problem_hundred_thirty_two,        
             p.problem_hundred_thirty_three,        
             p.problem_hundred_thirty_four,        
+            p.problem_hundred_thirty_five,        
+            p.problem_hundred_thirty_six,        
             ]
     random_problem_list = random.sample(problem_list, k=len(problem_list)) # k = problem_number
     question_counter = f.counter(len(problem_list))
