@@ -2565,3 +2565,26 @@ def problem_hundred_forty():
     answer_explanation = "No error. names identifer is assigned to [1, 2, 3] "
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_forty_one():         
+    """Call next() on an iterator when there are no further iterator items left 
+
+    """
+
+    problem = """{: >4s}
+    
+    name='tom'
+    it=iter(name)
+
+    for item in range(len(name)):
+        next(it)
+
+    next(it)
+
+    """.format("")
+
+    answer = ("P", d.errors['P'])
+    answer_explanation = "StopIteration"
+    error_hierarchy = d.hierarchy['P']
+    return(problem, answer, answer_explanation,error_hierarchy)
