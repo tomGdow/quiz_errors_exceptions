@@ -2533,3 +2533,35 @@ def problem_hundred_thirty_eight():
     answer_explanation = "No error. Output is b'1Aa' "
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_thirty_nine():         
+    """Starred assignment where target is neither a list or a tuple
+
+    """
+
+    problem = """{: >4s}
+
+    *names = 1,2,3    
+
+    """.format("")
+
+    answer = ("S", d.errors['S'])
+    answer_explanation = "SyntaxError: starred assignment target must be in a list or tuple"
+    error_hierarchy = d.hierarchy['S']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_forty():         
+    """Starred assignment where target is explicitly a tuple
+
+    """
+
+    problem = """{: >4s}
+
+    *names, = 1,2,3    
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No error. names identifer is assigned to [1, 2, 3] "
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
