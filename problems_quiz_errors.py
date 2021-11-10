@@ -306,7 +306,7 @@ def problem_nineteen():
     problem = """{: >4s}
     
     title ="python in easy steps"
-    print titel
+    print(titel)
 
     """.format("")
 
@@ -2244,7 +2244,7 @@ def problem_hundred_twenty_two():
     problem = """{: >4s}
 
     import os
-    os.makdirs('a/b/c/d')
+    os.makedirs('a/b/c/d')
     os.mkdir('a/b/c/d')
     
 
