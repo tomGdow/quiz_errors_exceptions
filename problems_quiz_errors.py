@@ -1229,6 +1229,8 @@ def problem_sixty_nine():
         x + arg
         return arg
 
+    fn(2)
+
     """.format("")
 
     answer = ("N", d.errors['N'])
