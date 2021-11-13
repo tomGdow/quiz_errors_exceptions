@@ -2607,3 +2607,21 @@ def problem_hundred_forty_two():
     answer_explanation = "TypeError: 'set' object is not subscriptable"
     error_hierarchy = d.hierarchy['T']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_forty_three():         
+    """Use the length of a list as an index to abstract an element using square-bracket notation 
+
+    """
+
+    problem = """{: >4s}
+    
+    lst=[1,2,3]
+    lst[len(lst)]    
+
+    """.format("")
+
+    answer = ("I", d.errors['I'])
+    answer_explanation = "IndexError: list index out of range"
+    error_hierarchy = d.hierarchy['I']
+    return(problem, answer, answer_explanation,error_hierarchy)
