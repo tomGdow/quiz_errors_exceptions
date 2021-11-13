@@ -2590,3 +2590,20 @@ def problem_hundred_forty_one():
     answer_explanation = "StopIteration"
     error_hierarchy = d.hierarchy['P']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_forty_two():         
+    """Take part of a set using square-bracket notation  
+
+    """
+
+    problem = """{: >4s}
+
+    {{1,2,3}}[1]
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: 'set' object is not subscriptable"
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
