@@ -2625,3 +2625,24 @@ def problem_hundred_forty_three():
     answer_explanation = "IndexError: list index out of range"
     error_hierarchy = d.hierarchy['I']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_forty_four():         
+    """ DOCSTRING HERE 
+
+    """
+
+    problem = """{: >4s}
+
+    lst=[1,2,3]
+
+    x=slice(len(lst))
+
+    lst[x]
+    
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No error. Output is [1,2,3]"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
