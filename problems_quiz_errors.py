@@ -2646,3 +2646,38 @@ def problem_hundred_forty_four():
     answer_explanation = "No error. Output is [1,2,3]"
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_forty_five():         
+    """Call int() on an integer with the base specified 
+
+    """
+
+    problem = """{: >4s}
+    
+    int(10, base=2)
+    
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: int() can't convert non-string with explicit base"
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_forty_six():         
+    """(Call int on a string where the base is specified
+
+    """
+
+    problem = """{: >4s}
+    
+    int('10', base=2)    
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No Error. The output is 2"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
