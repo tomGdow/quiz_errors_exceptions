@@ -2681,3 +2681,21 @@ def problem_hundred_forty_six():
     answer_explanation = "No Error. The output is 2"
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_forty_seven():         
+    """A decimal integAr with leading zero
+
+    """
+
+    problem = """{: >4s}
+
+    012
+
+    """.format("")
+
+    answer = ("S", d.errors['S'])     
+    answer_explanation = """SyntaxError: leading zeros in decimal integer literals are not permitted;
+    use an 0o prefix for octal integers"""
+    error_hierarchy = d.hierarchy['S']
+    return(problem, answer, answer_explanation,error_hierarchy)
