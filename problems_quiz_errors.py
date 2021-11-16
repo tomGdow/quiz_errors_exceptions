@@ -2684,7 +2684,7 @@ def problem_hundred_forty_six():
 
 
 def problem_hundred_forty_seven():         
-    """A decimal integAr with leading zero
+    """A decimal integer with leading zero
 
     """
 
@@ -2698,4 +2698,55 @@ def problem_hundred_forty_seven():
     answer_explanation = """SyntaxError: leading zeros in decimal integer literals are not permitted;
     use an 0o prefix for octal integers"""
     error_hierarchy = d.hierarchy['S']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_forty_eight():         
+    """Call int() on a decimal integer with leading zero
+
+    """
+
+    problem = """{: >4s}
+
+    int(012)
+
+    """.format("")
+
+    answer = ("S", d.errors['S'])     
+    answer_explanation = """SyntaxError: leading zeros in decimal integer literals are not permitted;
+    use an 0o prefix for octal integers"""
+    error_hierarchy = d.hierarchy['S']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_forty_nine():         
+    """Call int() on a string consisting of a leading zero and digits" 
+
+    """
+
+    problem = """{: >4s}
+
+    int('012')
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No error"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_fifty():         
+    """Call hex() on math.pi
+
+    """
+
+    problem = """{: >4s}
+    
+    import math
+    hex(math.pi)
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: 'float' object cannot be interpreted as an integer"
+    error_hierarchy = d.hierarchy['T']
     return(problem, answer, answer_explanation,error_hierarchy)
