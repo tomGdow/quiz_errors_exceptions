@@ -2750,3 +2750,52 @@ def problem_hundred_fifty():
     answer_explanation = "TypeError: 'float' object cannot be interpreted as an integer"
     error_hierarchy = d.hierarchy['T']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_fifty_one():         
+    """ DOCSTRING HERE 
+
+    """
+
+    problem = """{: >4s}
+    
+    float.hex(math.pi)
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No error: output is '0x1.921fb54442d18p+1' "
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_fifty_two():         
+    """Compile a complex expression with 'eval' as third argument
+
+    """
+
+    problem = """{: >4s}
+        str="x=\\ny=2\\nprint('x + y =', x+y)"
+        x=compile(str, 'test', 'eval')
+
+    """.format("")
+
+    answer = ("S", d.errors['S'])
+    answer_explanation = "SyntaxError: invalid syntax"
+    error_hierarchy = d.hierarchy['S']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_fifty_three():         
+    """Compile a complex expression with 'exec' as third argument
+
+    """
+
+    problem = """{: >4s}
+        str="x=\\ny=2\\nprint('x + y =', x+y)"
+        x=compile(str, 'test', 'exec')
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No error. type(x) gives <class 'code'>"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
