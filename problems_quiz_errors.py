@@ -2799,3 +2799,21 @@ def problem_hundred_fifty_three():
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
 
+def problem_hundred_fifty_four():         
+    """ DOCSTRING HERE 
+
+    """
+
+    problem = """{: >4s}
+    x=100
+    y=10
+
+    eval('x+y')
+    
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No error. Output is 110"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
