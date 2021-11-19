@@ -2800,7 +2800,7 @@ def problem_hundred_fifty_three():
     return(problem, answer, answer_explanation,error_hierarchy)
 
 def problem_hundred_fifty_four():         
-    """ DOCSTRING HERE 
+    """Call eval on externally defined global variables 
 
     """
 
@@ -2816,4 +2816,22 @@ def problem_hundred_fifty_four():
     answer = ("X", d.errors['X'])
     answer_explanation = "No error. Output is 110"
     error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_fifty_five():         
+    """Call eval() with one external global variable and one internal global variable
+
+    """
+
+    problem = """{: >4s}
+                                                       
+    x=100
+    y=10
+    eval('x+y', {{'x':'10'}})
+
+    """.format("")
+
+    answer = ("N", d.errors['N'])
+    answer_explanation = "NameError: name 'y' is not defined"
+    error_hierarchy = d.hierarchy['N']
     return(problem, answer, answer_explanation,error_hierarchy)
