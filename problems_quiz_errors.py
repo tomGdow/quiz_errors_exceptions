@@ -2835,3 +2835,36 @@ def problem_hundred_fifty_five():
     answer_explanation = "NameError: name 'y' is not defined"
     error_hierarchy = d.hierarchy['N']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_fifty_six():         
+    """Call eval with builtin function 'sum()' 
+
+    """
+
+    problem = """{: >4s}
+    
+    eval('sum([1,2,3])')
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No error. Output is 6"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_fifty_seven():         
+    """ Call eval with builtin function where '__builtins__' are excluded as global variables
+
+    """
+
+    problem = """{: >4s}
+
+   eval('sum([1,2,3])',{{'__builtins__':{{}}}},{{}})
+
+    """.format("")
+
+    answer = ("N", d.errors['N'])                                                
+    answer_explanation = "NameError: name 'sum' is not defined"
+    error_hierarchy = d.hierarchy['N']
+    return(problem, answer, answer_explanation,error_hierarchy)
