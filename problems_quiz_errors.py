@@ -223,13 +223,13 @@ def problem_fifteen():
     data=[]
     def get_data():
     	for i in range(1,5):
-    		marks=input('Enter Marks:')
-    		data.append(marks)
+    	    marks=input('Enter Marks:')
+    	    data.append(marks)
 
     def get_avg():
     	sum=0
     	for mark in data:
-    		sum += mark     
+    	    sum += mark     
     	return sum/len(data)
     get_data()
     print(get_avg())
@@ -1207,9 +1207,12 @@ def problem_sixty_eight():
 
     problem = """{: >4s}
     
+    x=10
     def myfn(arg):
         x += arg
         return x    
+
+    myfn(20)
 
     """.format("")
 
@@ -1805,6 +1808,8 @@ def problem_ninety_eight():
 
     problem = """{: >4s}
 
+    import random
+    l=[1,2,3] 
     random.sample(l,1) + random.choices(l)
 
     """.format("")
