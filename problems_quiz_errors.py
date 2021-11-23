@@ -2873,3 +2873,42 @@ def problem_hundred_fifty_seven():
     answer_explanation = "NameError: name 'sum' is not defined"
     error_hierarchy = d.hierarchy['N']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_fifty_eight():         
+    """Call a function without specifying required keyword arguments 
+
+    """
+
+    problem = """{: >4s}
+
+    def mixm(*c, a, b):
+        return c,a,b
+    
+    mixm(1,2,3,4)
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: mixm() missing 2 required keyword-only arguments: 'a' and 'b'"
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_fifty_nine():         
+    """Call a function explicitly specifying required keyword arguments 
+
+    """
+
+    problem = """{: >4s}
+
+    def mixm(*c, a, b):
+        return c,a,b
+    
+    mixm(1,2,a=10,b=20)
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No error. Output is ((1, 2), 10, 20) "
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
