@@ -2912,3 +2912,20 @@ def problem_hundred_fifty_nine():
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
 
+def problem_hundred_sixty():         
+    """Open an existing file with mode 'x' 
+
+    """
+
+    problem = """{: >4s}
+   
+    f = open('xyz.txt', 'w')
+    f.close()
+    f = open('xyz.txt', 'x')
+
+    """.format("")
+
+    answer = ("E", d.errors['E'])
+    answer_explanation = "FileExistsError: [Errno 17] File exists: 'xyz.txt' "
+    error_hierarchy = d.hierarchy['E']
+    return(problem, answer, answer_explanation,error_hierarchy)
