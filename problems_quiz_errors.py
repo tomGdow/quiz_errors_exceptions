@@ -2929,3 +2929,22 @@ def problem_hundred_sixty():
     answer_explanation = "FileExistsError: [Errno 17] File exists: 'xyz.txt' "
     error_hierarchy = d.hierarchy['E']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_sixty_one():         
+    """Add a set to a set 
+
+    """
+
+    problem = """{: >4s}
+    s = set((1,2))
+    s2 = set((3,4))    
+
+    s.add(s2)
+
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: unhashable type: 'set'"
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
