@@ -2948,3 +2948,22 @@ def problem_hundred_sixty_one():
     answer_explanation = "TypeError: unhashable type: 'set'"
     error_hierarchy = d.hierarchy['T']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_sixty_two():         
+    """Update a set with a set 
+
+    """
+
+    problem = """{: >4s}
+    s = set((1,2))
+    s2 = set((3,4))    
+
+    s.update(s2)
+
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No error. Modifies in place. s becomes {1, 2, 3, 4}"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
