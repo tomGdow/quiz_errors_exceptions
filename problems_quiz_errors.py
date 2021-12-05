@@ -2,9 +2,9 @@ import data_quiz_errors as d
 def problem_one():
     """ print an undefined identifier"""
     problem="""
-   
+
    {: >4s}{}
-   
+
    """.format("","print(x)")
     answer=("N", d.errors['N'])
     answer_explanation = "NameError: name 'x' is not defined"
@@ -72,7 +72,7 @@ def problem_six():
     problem = """{: >4s}
 
     # file 'my_missing_file' does not exist!
-    
+
     with open('my_missing_file.txt') as f:
         f.read()
 
@@ -118,7 +118,7 @@ def problem_nine():
     problem = """{: >4s}
 
       mydict = {{'a': 'alpha', 'b' : 'beta'}}
-       
+
       mydict.pop() 
 
     """.format("")
@@ -151,7 +151,7 @@ def problem_eleven():
     problem = """{: >4s}
 
       mydict = {{'a': 'alpha', 'b' : 'beta'}}
-       
+
       mydict['c']  
 
     """.format("")
@@ -167,7 +167,7 @@ def problem_twelve():
     problem = """{: >4s}
 
       mydict = {{'a': 'alpha', 'b' : 'beta'}}
-       
+
       mydict.get('c')  
 
     """.format("")
@@ -183,7 +183,7 @@ def problem_thirteen():
     problem = """{: >4s}
 
       mydict = {{'a': 'alpha', 'b' : 'beta'}}
-       
+
       mydict.get('c', 'Not There')  
 
     """.format("")
@@ -222,15 +222,15 @@ def problem_fifteen():
 
     data=[]
     def get_data():
-    	for i in range(1,5):
-    	    marks=input('Enter Marks:')
-    	    data.append(marks)
+        for i in range(1,5):
+            marks=input('Enter Marks:')
+            data.append(marks)
 
     def get_avg():
-    	sum=0
-    	for mark in data:
-    	    sum += mark     
-    	return sum/len(data)
+        sum=0
+        for mark in data:
+            sum += mark     
+        return sum/len(data)
     get_data()
     print(get_avg())
 
@@ -247,7 +247,7 @@ def problem_sixteen():
     """
 
     problem = """{: >4s}
-    
+
     def calc_sum(x,y):
         op = x + y
         return(op)
@@ -269,7 +269,7 @@ def problem_seventeen():
     """
 
     problem = """{: >4s}
-    
+
     l=[10,20,30]         
     l.add(30)
 
@@ -304,7 +304,7 @@ def problem_nineteen():
     """
 
     problem = """{: >4s}
-    
+
     title ="python in easy steps"
     print(titel)
 
@@ -314,7 +314,7 @@ def problem_nineteen():
     answer_explanation = "NameError: name 'titel' is not defined"
     error_hierarchy = d.hierarchy['N']
     return(problem, answer, answer_explanation,error_hierarchy)
-                     
+
 
 def problem_twenty():         
     """ Multiply an undefined identifier
@@ -322,7 +322,7 @@ def problem_twenty():
     """
 
     problem = """{: >4s}
-    
+
     4 + spam * 3
 
     """.format("")
@@ -339,7 +339,7 @@ def problem_twenty_one():
     """
 
     problem = """{: >4s}
-    
+
     ab = int('hi') 
 
     """.format("")
@@ -356,7 +356,7 @@ def problem_twenty_two():
     """
 
     problem = """{: >4s}
-    
+
     import random
     random.choice([])
 
@@ -377,7 +377,7 @@ def problem_twenty_three():
     import random
     mylist = [1,2,3]
     random.sample(mylist,3)
-    
+
 
     """.format("")
 
@@ -395,7 +395,7 @@ def problem_twenty_four():
     import random
     mylist = [1,2,3]
     random.sample(mylist,4)
-    
+
 
     """.format("")
 
@@ -411,7 +411,7 @@ def problem_twenty_five():
     """
 
     problem = """{: >4s}
-    
+
     # 'abc.txt' is a file in the working directory
 
     f=open('abc.txt')
@@ -455,7 +455,7 @@ def problem_twenty_seven():
     myset=set(['tom','dick', 'harry'])
 
     myset.remove('dave')
-    
+
 
     """.format("")
 
@@ -466,7 +466,7 @@ def problem_twenty_seven():
     """
     error_hierarchy = d.hierarchy['K']
     return(problem, answer, answer_explanation,error_hierarchy)
-     
+
 def problem_twenty_eight():         
     """ attempt to remove a non-existent element from a set with .discard() 
 
@@ -477,7 +477,7 @@ def problem_twenty_eight():
     myset=set(['tom','dick', 'harry'])
 
     myset.discard('dave')
-    
+
 
     """.format("")
 
@@ -497,7 +497,7 @@ def problem_twenty_nine():
     myset=set(['tom','dick', 'harry'])
 
     myset.discard('dave', 'not there')
-    
+
 
     """.format("")
 
@@ -509,7 +509,7 @@ def problem_twenty_nine():
 
 def problem_thirty():         
     """ Call try-else-finally code block without an except clause 
-       
+
     """
 
     problem = """{: >4s}
@@ -521,7 +521,7 @@ def problem_thirty():
         print('Cannot divide by Zero')
     finally:
         print('I always print')
-    
+
     print('j', end = ' ')
 
     """.format("")
@@ -539,7 +539,7 @@ def problem_thirty_one():
     """
 
     problem = """{: >4s}
-    
+
     mydict = {{'a': 'alpha', 'b' : 'beta'}}
 
     mydict.popitem() 
@@ -558,7 +558,7 @@ def problem_thirty_two():
     """
 
     problem = """{: >4s}
-    
+
     x = {{}}
     x.add('tom')
 
@@ -576,10 +576,10 @@ def problem_thirty_three():
     """
 
     problem = """{: >4s}
-    
+
     x = set()
     x.add('tom')
-    
+
 
     """.format("")
 
@@ -603,7 +603,7 @@ def problem_thirty_four():
 
     import importlib
     importlib.reload(greetings)
-    
+
 
     """.format("")
 
@@ -612,7 +612,7 @@ def problem_thirty_four():
     error_hierarchy = d.hierarchy['N']
     return(problem, answer, answer_explanation,error_hierarchy)
 
-  
+
 def problem_thirty_five():         
     """ Call .format() method on a string with too many arguments
 
@@ -689,7 +689,7 @@ def problem_thirty_nine():
 
     import datetime
     now = datetime.date.now()
-    
+
 
     """.format("")
 
@@ -730,7 +730,7 @@ def problem_forty_one():
     (today - april_fools).days    
 
     """.format("")
-                             
+
     answer = ("X", d.errors['X'])
     answer_explanation = "No Error // 173 "
     error_hierarchy = d.hierarchy['X']
@@ -743,11 +743,11 @@ def problem_forty_two():
     """
 
     problem = """{: >4s}
-    
+
     delta_t = datetime.timedelta(months=1)
 
     """.format("")
-                             
+
     answer = ("T", d.errors['T'])
     answer_explanation = "TypeError: 'months' is an invalid keyword argument for __new__()"
     error_hierarchy = d.hierarchy['T']
@@ -760,11 +760,11 @@ def problem_forty_three():
     """
 
     problem = """{: >4s}
-    
+
     delta_t = datetime.timedelta(weeks=4)          
 
     """.format("")
-                             
+
     answer = ("X", d.errors['X'])
     answer_explanation = "No Error. print(delta_t)  // 28 days, 0:00:00"
     error_hierarchy = d.hierarchy['X']
@@ -779,7 +779,7 @@ def problem_forty_four():
     problem = """{: >4s}
 
     min(['tom', 'dick', 'harry',1])
-    
+
 
     """.format("")
 
@@ -829,7 +829,7 @@ def problem_forty_seven():
 
     problem = """{: >4s}
     datetime.datetime.strptime('17/2000/3', "%d/%Y/%m")
-    
+
 
     """.format("")
 
@@ -864,7 +864,7 @@ def problem_forty_nine():
     problem = """{: >4s}
 
     datetime.datetime.strptime('3/2000/17', "%d/%Y/%m")
-    
+
 
     """.format("")
 
@@ -897,10 +897,10 @@ def problem_fifty_one():
     """
 
     problem = """{: >4s}
-                                                     
+
     mydict = {{'fname': 'tom', 'lname': 'doe'}}
     mydict.pop('firstname')
-                                                    
+
 
     """.format("")
 
@@ -916,7 +916,7 @@ def problem_fifty_two():
     """
 
     problem = """{: >4s}
-    
+
     a = 4
     b = 5
     assert a > b
@@ -954,7 +954,7 @@ def problem_fifty_four():
     problem = """{: >4s}
 
     True + 1
-    
+
 
     """.format("")
 
@@ -974,7 +974,7 @@ def problem_fifty_five():
     my_tuple= (1,2,3)
 
     del my_tuple[0]
-    
+
 
     """.format("")
 
@@ -1037,7 +1037,7 @@ def problem_fifty_eight():
     """
 
     problem = """{: >4s}
-    
+
     "{{:,n}}".format(1000)
 
     """.format("")
@@ -1069,7 +1069,7 @@ def problem_sixty():
     """
 
     problem = """{: >4s}
-    
+
     "{{:.4d}}".format(1000)
 
     """.format("")
@@ -1104,7 +1104,7 @@ def problem_sixty_two():
     """
 
     problem = """{: >4s}
-    
+
     print("{{:.0f}}".format(math.sqrt(4)))
 
     """.format("")
@@ -1120,7 +1120,7 @@ def problem_sixty_three():
     """
 
     problem = """{: >4s}
-    
+
     print("%d" % math.sqrt(2))
 
     """.format("")
@@ -1137,7 +1137,7 @@ def problem_sixty_four():
     """
 
     problem = """{: >4s}
-    
+
     import math
     print("{{:d}}".format(math.pow(2,3)))
 
@@ -1155,7 +1155,7 @@ def problem_sixty_five():
     """
 
     problem = """{: >4s}
-    
+
     print("{{:d}}".format(pow(2,3)))
     """.format("")
 
@@ -1171,7 +1171,7 @@ def problem_sixty_six():
     """
 
     problem = """{: >4s}
-                                             
+
     print("{{:d}}".format(2**3))
 
     """.format("")
@@ -1206,7 +1206,7 @@ def problem_sixty_eight():
     """
 
     problem = """{: >4s}
-    
+
     x=10
     def myfn(arg):
         x += arg
@@ -1227,7 +1227,7 @@ def problem_sixty_nine():
     """
 
     problem = """{: >4s}
-    
+
     def fn(arg):
         x + arg
         return arg
@@ -1270,7 +1270,7 @@ def problem_seventy_one():
     """
 
     problem = """{: >4s}
-    
+
     x = 1
     def fn(arg):
         global x
@@ -1292,7 +1292,7 @@ def problem_seventy_two():
     """
 
     problem = """{: >4s}
-    
+
     def fn(a=10, b=10, c):
         pass
 
@@ -1339,7 +1339,7 @@ def problem_seventy_four():
         return a + b + args
 
     fn(1,2,3,4,5) 
-    
+
 
     """.format("")
 
@@ -1382,7 +1382,7 @@ def problem_seventy_six():
         return a + b
 
      fn(1,2,3,4,5)
-    
+
 
     """.format("")
 
@@ -1403,7 +1403,7 @@ def problem_seventy_seven():
         return (a,b) + args
 
     fn(1,2,3,4,5)
-    
+
 
     """.format("")
 
@@ -1424,7 +1424,7 @@ def problem_seventy_eight():
         return a, b, c
 
     fn(1,2,3)
-    
+
 
     """.format("")
 
@@ -1445,7 +1445,7 @@ def problem_seventy_nine():
         return a, b, c
 
     fn(1,b=2,c=3)
-    
+
 
     """.format("")
 
@@ -1466,7 +1466,7 @@ def problem_eighty():
         return a, b, c
 
     fn(b=2,c=3,1)
-    
+
 
     """.format("")
 
@@ -1482,7 +1482,7 @@ def problem_eighty_one():
     """
 
     problem = """{: >4s}
- 
+
     mydict = dict('a' = 'tom')    
 
     """.format("")
@@ -1519,7 +1519,7 @@ def problem_eighty_three():
     """
 
     problem = """{: >4s}
-    
+
     def fn(**kwargs):
         return kwargs
 
@@ -1573,9 +1573,9 @@ def problem_eighty_six():
     """
 
     problem = """{: >4s}
-    
+
     '2' + '3'
-    
+
 
     """.format("")
 
@@ -1608,7 +1608,7 @@ def problem_eighty_eight():
     """
 
     problem = """{: >4s}
-    
+
     "2" - "1"
 
     """.format("")
@@ -1688,7 +1688,7 @@ def problem_ninety_two():
     """
 
     problem = """{: >4s}
-    
+
     import random
     random.sample(range(10))
 
@@ -1696,7 +1696,7 @@ def problem_ninety_two():
 
     answer = ("T", d.errors['T'])
     answer_explanation = """TypeError: Random.sample() missing 1 required positional argument: 'k' 
-    
+
     {} 
     """.format(d.extra_material["random_sample_choice"]) 
     error_hierarchy = d.hierarchy['T']
@@ -1708,7 +1708,7 @@ def problem_ninety_three():
     """
 
     problem = """{: >4s}
-    
+
     import random
     random.sample(range(10), k=2)
 
@@ -1716,7 +1716,7 @@ def problem_ninety_three():
 
     answer = ("X", d.errors['X'])
     answer_explanation = """No error. Sample output is [7,8] 
-    
+
     {} 
     """.format(d.extra_material["random_sample_choice"]) 
     error_hierarchy = d.hierarchy['X']
@@ -1729,7 +1729,7 @@ def problem_ninety_four():
     """
 
     problem = """{: >4s}
-    
+
     import random
     random.choices(range(10))
 
@@ -1737,7 +1737,7 @@ def problem_ninety_four():
 
     answer = ("X", d.errors['X'])
     answer_explanation = """No error. Sample output is [8] 
-    
+
     {} 
     """.format(d.extra_material["random_sample_choice"]) 
     error_hierarchy = d.hierarchy['X']
@@ -1750,9 +1750,9 @@ def problem_ninety_five():
     """
 
     problem = """{: >4s}
- 
+
     myd=dict(a='tom', b='dick')
-    
+
     del myd['harry']
 
     """.format("")
@@ -1769,9 +1769,9 @@ def problem_ninety_six():
     """
 
     problem = """{: >4s}
-    
+
     myd=dict(a='tom', b='dick')
-    
+
     myd.update(dict(c='harry'))
 
     """.format("")
@@ -1788,9 +1788,9 @@ def problem_ninety_seven():
     """
 
     problem = """{: >4s}
-    
+
     l = range(10)
-    
+
     random.choice(l) + random.choices(l)    
 
     """.format("")
@@ -1828,7 +1828,7 @@ def problem_ninety_nine():
     problem = """{: >4s}
 
      (1,) + (2,3)
-    
+
 
     """.format("")
 
@@ -1844,7 +1844,7 @@ def problem_one_hundred():
     """
 
     problem = """{: >4s}
-    
+
     (1) + (2,3)
 
     """.format("")
@@ -1860,7 +1860,7 @@ def problem_hundred_one():
     """
 
     problem = """{: >4s}
-    
+
     "harry".index('h',1)
 
     """.format("")
@@ -1879,7 +1879,7 @@ def problem_hundred_two():
     """
 
     problem = """{: >4s}
-    
+
     "harry".find('h',1)
 
     """.format("")
@@ -1898,7 +1898,7 @@ def problem_hundred_three():
     """
 
     problem = """{: >4s}
-    
+
     "harry".rindex('y',-1)
 
     """.format("")
@@ -1915,7 +1915,7 @@ def problem_hundred_four():
     """
 
     problem = """{: >4s}
-    
+
     import math
     math.round(22.2)
 
@@ -1933,7 +1933,7 @@ def problem_hundred_five():
     """
 
     problem = """{: >4s}
-    
+
     round(22.5)
 
     """.format("")
@@ -1953,7 +1953,7 @@ def problem_hundred_six():
 
     a = 10
     b = 10
-    
+
     a,b = [10]
 
     """.format("")
@@ -1975,7 +1975,7 @@ def problem_hundred_seven():
 
     template = Template("Hello $name")
     template.safe_substitute(namae="dick")
-    
+
 
     """.format("")
 
@@ -1995,7 +1995,7 @@ def problem_hundred_eight():
 
     template = Template("Hello $name")
     template.substitute(namae="dick")
-    
+
 
     """.format("")
 
@@ -2010,7 +2010,7 @@ def problem_hundred_nine():
     """
 
     problem = """{: >4s}
-    
+
     TomDickHarry'.strip(*['T','D'])
 
     """.format("")
@@ -2026,7 +2026,7 @@ def problem_hundred_ten():
     """
 
     problem = """{: >4s}
-    
+
     myset=set()
     myset.add(['tom', 'dick', 'harry'])
 
@@ -2044,7 +2044,7 @@ def problem_hundred_eleven():
     """
 
     problem = """{: >4s}
-    
+
     myset = set()
     myset.add(('dick', 'harry'))
 
@@ -2062,7 +2062,7 @@ def problem_hundred_twelve():
     """
 
     problem = """{: >4s}
-   
+
    lst=[1,2,3]
    lst.pop()
 
@@ -2086,7 +2086,7 @@ def problem_hundred_thirteen():
 
     lst=[1,2,3]
     lst[3]=400
-    
+
 
     """.format("")
 
@@ -2141,7 +2141,7 @@ def problem_hundred_sixteen():
     t=([1,2,3],)
 
     t[0]=[100,200,300]
-    
+
 
     """.format("")
 
@@ -2161,7 +2161,7 @@ def problem_hundred_seventeen():
     t=([1,2,3],)
 
     t[0][0]=[1,2,3]
-    
+
 
     """.format("")
 
@@ -2196,7 +2196,7 @@ def problem_hundred_nineteen():
     """Pop a specific item from a set """
 
     problem = """{: >4s}
-    
+
     s = set(range(10))
 
     s.pop(2)
@@ -2215,7 +2215,7 @@ def problem_hundred_twenty():
     """
 
     problem = """{: >4s}
-    
+
     {{1,2,3}} + {{4,5,6}}
 
     """.format("")
@@ -2232,7 +2232,7 @@ def problem_hundred_twenty_one():
     """
 
     problem = """{: >4s}
-    
+
     {{1,2,3}} - {{3,4,5}}
 
     """.format("")
@@ -2253,7 +2253,7 @@ def problem_hundred_twenty_two():
     import os
     os.makedirs('a/b/c/d')
     os.mkdir('a/b/c/d')
-    
+
 
     """.format("")
 
@@ -2275,7 +2275,7 @@ def problem_hundred_twenty_three():
     def func():
         num = num + 3
         print(num)
-    
+
     func()
     print(num)
 
@@ -2297,7 +2297,7 @@ def problem_hundred_twenty_four():
     num = '7' * '7'
 
     print(num)
-    
+
 
     """.format("")
 
@@ -2312,7 +2312,7 @@ def problem_hundred_twenty_five():
     """
 
     problem = """{: >4s}
-    
+
     print('1200.2 + 1200.2 equals', format(2400.4, "%.4f"))   
 
     """.format("")
@@ -2328,7 +2328,7 @@ def problem_hundred_twenty_six():
     """
 
     problem = """{: >4s}
-    
+
     print('1200.2 + 1200.2 equals', format(2400.4, ".4f"))   
 
     """.format("")
@@ -2347,7 +2347,7 @@ def problem_hundred_twenty_seven():
     problem = """{: >4s}
 
     1%0
-    
+
 
     """.format("")
 
@@ -2363,7 +2363,7 @@ def problem_hundred_twenty_eight():
     """
 
     problem = """{: >4s}
-  
+
     int('22.2')
 
     """.format("")
@@ -2380,7 +2380,7 @@ def problem_hundred_twenty_nine():
     """
 
     problem = """{: >4s}
-    
+
     int(str(22.))    
 
     """.format("")
@@ -2497,7 +2497,7 @@ def problem_hundred_thirty_six():
     """
 
     problem = """{: >4s}
-    
+
     bytes([48,65,97]).pop(0)
 
     """.format("")
@@ -2514,7 +2514,7 @@ def problem_hundred_thirty_seven():
     """
 
     problem = """{: >4s}
-    
+
     bytearray([48,65,97]).replace(b'0', b'1')    
 
     """.format("")
@@ -2531,7 +2531,7 @@ def problem_hundred_thirty_eight():
     """
 
     problem = """{: >4s}
-    
+
     bytes([48,65,97]).replace(b'0', b'1')
 
     """.format("")
@@ -2580,7 +2580,7 @@ def problem_hundred_forty_one():
     """
 
     problem = """{: >4s}
-    
+
     name='tom'
     it=iter(name)
 
@@ -2620,7 +2620,7 @@ def problem_hundred_forty_three():
     """
 
     problem = """{: >4s}
-    
+
     lst=[1,2,3]
     lst[len(lst)]    
 
@@ -2643,7 +2643,7 @@ def problem_hundred_forty_four():
     x=slice(len(lst))
 
     lst[x]
-    
+
 
     """.format("")
 
@@ -2659,9 +2659,9 @@ def problem_hundred_forty_five():
     """
 
     problem = """{: >4s}
-    
+
     int(10, base=2)
-    
+
 
     """.format("")
 
@@ -2677,7 +2677,7 @@ def problem_hundred_forty_six():
     """
 
     problem = """{: >4s}
-    
+
     int('10', base=2)    
 
     """.format("")
@@ -2745,7 +2745,7 @@ def problem_hundred_fifty():
     """
 
     problem = """{: >4s}
-    
+
     import math
     hex(math.pi)
 
@@ -2762,7 +2762,7 @@ def problem_hundred_fifty_one():
     """
 
     problem = """{: >4s}
-    
+
     float.hex(math.pi)
 
     """.format("")
@@ -2814,7 +2814,7 @@ def problem_hundred_fifty_four():
     y=10
 
     eval('x+y')
-    
+
 
     """.format("")
 
@@ -2829,7 +2829,7 @@ def problem_hundred_fifty_five():
     """
 
     problem = """{: >4s}
-                                                       
+
     x=100
     y=10
     eval('x+y', {{'x':'10'}})
@@ -2847,7 +2847,7 @@ def problem_hundred_fifty_six():
     """
 
     problem = """{: >4s}
-    
+
     eval('sum([1,2,3])')
 
     """.format("")
@@ -2883,7 +2883,7 @@ def problem_hundred_fifty_eight():
 
     def mixm(*c, a, b):
         return c,a,b
-    
+
     mixm(1,2,3,4)
 
     """.format("")
@@ -2902,7 +2902,7 @@ def problem_hundred_fifty_nine():
 
     def mixm(*c, a, b):
         return c,a,b
-    
+
     mixm(1,2,a=10,b=20)
 
     """.format("")
@@ -2918,7 +2918,7 @@ def problem_hundred_sixty():
     """
 
     problem = """{: >4s}
-   
+
     f = open('xyz.txt', 'w')
     f.close()
     f = open('xyz.txt', 'x')
@@ -2965,5 +2965,25 @@ def problem_hundred_sixty_two():
 
     answer = ("X", d.errors['X'])
     answer_explanation = "No error. Modifies in place. s becomes {1, 2, 3, 4}"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_sixty_three():         
+    """Use 'for' loop to iterate over elements of a set
+
+    """
+
+    problem = """{: >4s}
+    mys=set('tom', 'dick', 'harry')
+
+    for i in mys:
+        print(i) 
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = """No Error. Output is:
+    dick
+    tom
+    harry"""
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
