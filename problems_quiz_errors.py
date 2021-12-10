@@ -2987,3 +2987,97 @@ def problem_hundred_sixty_three():
     harry"""
     error_hierarchy = d.hierarchy['X']
     return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_sixty_four():         
+    """ DOCSTRING HERE 
+
+    """
+
+    problem = """{: >4s}
+    None
+    s1 = 'tom'
+    s2 = 'dick'
+    print(s1 s2)
+
+    """.format("")
+
+    answer = ("S", d.errors['S'])
+    answer_explanation = """SyntaxError: invalid syntax. Perhaps you forgot a comma?
+    !! Contrast with string literals """
+    error_hierarchy = d.hierarchy['S']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_sixty_five():         
+    """Call hash on a tuple where the tuple fields are lists 
+
+    """
+
+    problem = """{: >4s}
+
+    tup=([1,2,3],[20,40,50])
+    hash(tup)
+
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: unhashable type: 'list'"
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+
+def problem_hundred_sixty_six():         
+    """Call 'sort' method on a list with both string and integer elements 
+
+    """
+
+    problem = """{: >4s}
+
+    mylist=['0', 'A', 'a', 1]
+    mylist.sort()
+
+    """.format("")
+
+    answer = ("T", d.errors['T'])
+    answer_explanation = "TypeError: '<' not supported between instances of 'int' and 'str'"
+    error_hierarchy = d.hierarchy['T']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_sixty_seven():         
+    """ DOCSTRING HERE 
+
+    """
+
+    problem = """{: >4s}
+    
+    mylist =  ['tom', 'dick', 'harry']
+    mylist.remove('Tom')
+
+    """.format("")
+
+    answer = ("V", d.errors['V'])
+    answer_explanation = "ValueError: list.remove(x): x not in list"
+    error_hierarchy = d.hierarchy['V']
+    return(problem, answer, answer_explanation,error_hierarchy)
+
+def problem_hundred_sixty_eight():         
+    """Call remove on lst from within while loop, where the argument for remove
+       it not an element of lst
+
+    """
+
+    problem = """{: >4s}
+
+    while 'Tom' in mylist:
+        mylist.remove('Tom')
+    else:
+        print(mylist)
+
+
+    """.format("")
+
+    answer = ("X", d.errors['X'])
+    answer_explanation = "No error. Output is: ['tom', 'dick', 'harry']"
+    error_hierarchy = d.hierarchy['X']
+    return(problem, answer, answer_explanation,error_hierarchy)
